@@ -3,6 +3,7 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import { useGetDevices } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useEffect, useState } from "react";
+import './slide.css'
 
 const DevicesNew = () => {
   const { data } = useGetDevices();
@@ -11,7 +12,7 @@ const DevicesNew = () => {
   const [slide, setSlide] = useState(0);
 
   const slideNext = () => {
-    setSlide(slide + 1);
+    setSlide(slide +1);
     
   };
 
@@ -20,20 +21,12 @@ const DevicesNew = () => {
   };
 
   useEffect(() => {
-    const card = document.getElementById("card");
-    let trn = (12 * slide) - 12
     let limit = 12 * slide
 
     if (limit > 25 ) {
-        card?.classList.add(`left-[0rem]`)
         setSlide(0)
     }
-    card?.classList.add(`-left-[${12 * slide}rem]`)
-    card?.classList.remove(`-left-[${trn}rem]`)
-    card?.classList.remove(`left-[0rem]` )
-    card?.classList.remove(`-left-[36rem]`)
-
-    console.log(card);
+    
   }, [slide]);
 
   return (
@@ -51,8 +44,8 @@ const DevicesNew = () => {
         (cate, i) =>
           cate.name === "Devices" && (
             <div
-              className=" h-full relative max-[500px]:flex-col flex w-full justify-between items-center "
-              key={cate.name + i}
+              className=" relative max-[500px]:flex-col flex w-full justify-between items-center "
+              key={i}
             >
               <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-4 justify-center items-center ">
                 <Stack
@@ -84,14 +77,16 @@ const DevicesNew = () => {
                   </div>
                 </Stack>
               </div>
-              <div  className=" max-[500px]:h-[165px] h-[280px]  transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%]  w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
-                  id="card"
-                  className=" left-[0rem]  absolute top-4  transition-all gap-2 w-full flex "
+                  id=""
+                  style={{
+                    translate:`-${slide * 12}rem`
+                  }}
+                  className="   transition-all gap-2 w-full flex "
                 >
-                  {cate?.productListBuyers?.slice(0, 6).map((product, i) => (
-
-                    <div key={i + product.name} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
+                  {cate?.productListBuyers.slice(0, 6).map((product, i) => (
+                    <div key={i} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
                       <img
                         src={product.url}
                         className=" w-[100%] rounded-lg "
@@ -122,7 +117,7 @@ const DevicesNew = () => {
 
                       <div className=" flex justify-center items-center ">
                         <svg
-                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
+                          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
                           focusable="false"
                           aria-hidden="true"
                           viewBox="0 0 24 24"

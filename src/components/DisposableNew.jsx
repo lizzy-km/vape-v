@@ -20,18 +20,12 @@ const DisposableNew = () => {
     };
   
     useEffect(() => {
-      const card = document.getElementById("cardD");
-      let trn = (12 * slide) - 12
       let limit = 12 * slide
   
       if (limit > 25 ) {
-          card?.classList.add(`left-[0rem]`)
           setSlide(0)
       }
-      card?.classList.add(`-left-[${12 * slide}rem]`)
-      card?.classList.remove(`-left-[${trn}rem]`)
-      card?.classList.remove(`left-[0rem]`)
-      card?.classList.remove(`-left-[36rem]`)
+     
       
     }, [slide]);
   return (
@@ -82,61 +76,63 @@ const DisposableNew = () => {
                 </div>
               </Stack>
             </div>
-            <div  className=" max-[500px]:h-[165px] h-[280px]  transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%]  w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+            <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
-                  id="cardD"
-                  className=" left-[0rem]  absolute top-4  transition-all gap-2 w-full flex "
+                  id=""
+                  style={{
+                    translate:`-${slide * 12}rem`
+                  }}
+                  className="   transition-all gap-2 w-full flex "
                 >
-                
-                {cate?.productListBuyers.slice(0, 6).map((product, i) => (
-                   <div key={i} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
-                   <img
-                     src={product.url}
-                     className=" w-[100%] rounded-lg "
-                   />
-                   <Typography sx={{ color: "white", fontSize: mobile? "10px" : "14px" }}>
-                     {product.name}
-                   </Typography>
-                   {product.promotePrice > 0 ? (
-                     <>
-                       <Typography sx={{ color: "white" }}>
-                         {product.promotePrice} Ks
-                       </Typography>
-                       <Typography
-                         sx={{
-                           color: "gold",
-                           textDecoration: "line-through",
-                           fontSize: mobile? "10px" : "14px" 
-                         }}
-                       >
-                         {product.originalPrice} Ks
-                       </Typography>
-                     </>
-                   ) : (
-                     <Typography sx={{ color: "gold", fontSize: mobile? "10px" : "14px"  }}>
-                       {product.originalPrice} MMK
-                     </Typography>
-                   )}
+                  {cate?.productListBuyers.slice(0, 6).map((product, i) => (
+                    <div key={i} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
+                      <img
+                        src={product.url}
+                        className=" w-[100%] rounded-lg "
+                      />
+                      <Typography sx={{ color: "white", fontSize: mobile? "10px" : "14px" }}>
+                        {product.name}
+                      </Typography>
+                      {product.promotePrice > 0 ? (
+                        <>
+                          <Typography sx={{ color: "white" }}>
+                            {product.promotePrice} Ks
+                          </Typography>
+                          <Typography
+                            sx={{
+                              color: "gold",
+                              textDecoration: "line-through",
+                              fontSize: mobile? "10px" : "14px" 
+                            }}
+                          >
+                            {product.originalPrice} Ks
+                          </Typography>
+                        </>
+                      ) : (
+                        <Typography sx={{ color: "gold", fontSize: mobile? "10px" : "14px"  }}>
+                          {product.originalPrice} MMK
+                        </Typography>
+                      )}
 
-                   <div className=" flex justify-center items-center ">
-                     <svg
-                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
-                       focusable="false"
-                       aria-hidden="true"
-                       viewBox="0 0 24 24"
-                       data-testid="StarIcon"
-                     >
-                       <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                     </svg>
-                     <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[10px] text-[12px] ">
-                       {" "}
-                       600 Points{" "}
-                     </p>
-                   </div>
-                 </div>
-                ))}
+                      <div className=" flex justify-center items-center ">
+                        <svg
+                          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="StarIcon"
+                        >
+                          <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                        </svg>
+                        <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[10px] text-[12px] ">
+                          {" "}
+                          600 Points{" "}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
             <div className=" top-0 h-[79%] flex max-[500px]:items-end justify-center items-center absolute right-4 ">
                 <div
                   onClick={slideNext}
