@@ -91,7 +91,7 @@ const Footer = () => {
             xs={12}
         >
             <Typography variant="subtitle1">Download Our App</Typography>
-            <img src="/images/qrcode.png" alt="" width={"100px"} height={"100px"}/>
+            <img src="/images/qrcode.svg" alt="" width={"100px"} height={"100px"}/>
         </Grid>
         <Grid
             item
@@ -104,8 +104,8 @@ const Footer = () => {
                 gap={1}
                 mt={1}
             >
-                <img src="/images/kpay.png" alt="kpay" width={"50px"} height={"50px"}/>
-                <img src="/images/wavemoney.jpg" alt="wavemoney" width={"50px"} height={"50px"} style={{borderRadius: "5px"}}/>
+                <img className=" w-[60px] h-[40px] object-cover rounded-md " src="/images/kpay.png" alt="kpay" />
+                <img src="/images/wavemoney.jpg" alt="wavemoney" className=" w-[60px] h-[40px] object-cover rounded-md "/>
             </Stack>
         </Grid>
         <Grid
