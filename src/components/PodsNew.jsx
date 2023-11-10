@@ -56,7 +56,7 @@ const PodsNew = () => {
                 alignItems={"center"}
               >
                 <img
-                  src="/public/images/vapepod.png"
+                  src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapepod.png?raw=true"
                   className=" w-[50px] h-auto "
                   style={{ borderRadius: "10px" }}
                 />

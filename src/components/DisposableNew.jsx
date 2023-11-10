@@ -53,7 +53,7 @@ const DisposableNew = () => {
                 alignItems={"center"}
               >
                 <img
-                  src="/public/images/vapedisposable.png"
+                  src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedisposable.png?raw=true"
                   className=" w-[50px] h-auto "
                   style={{ borderRadius: "10px" }}
                 />

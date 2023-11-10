@@ -54,7 +54,7 @@ const DevicesNew = () => {
                   alignItems={"center"}
                 >
                   <img
-                    src="/public/images/vapedevice.png"
+                    src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedevice.png?raw=true"
                     className=" w-[90px] h-auto "
                     style={{ borderRadius: "10px" }}
                   />
