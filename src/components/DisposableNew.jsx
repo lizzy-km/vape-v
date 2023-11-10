@@ -38,7 +38,7 @@ const DisposableNew = () => {
     <div
     className=" w-[90%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[4rem] "
     style={{
-      background: "url(/images/fruit.png)",
+      background: "url(/public/images/fruit.png)",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#312f2f",
       backgroundSize: "300px",
