@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.head{
+  font-family:'Times New Roman', Times, serif;
+}
+
+body {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+
+
+.slide {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.css-x9fn3p{
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  color: gold;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins,sans-serif;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 10px;
+}
+
+ /** Membership **/
+ .prizeImg {
+  width: 70px;
+  margin-right: 10px;
+}
+
+#member {
+  background-image: repeating-radial-gradient(
+    at center,
+    rgba(1, 1, 1, 0.9) 50%,
+    rgba(64, 65, 64, 1) 60%
+  );
+  background-size: 70px 70px;
+  border-radius: 10px;
+  height: 360px;
+}
+
+#devices {
+  height: 360px;
+  background-color: #312f2f;
+  border-radius: 10px;
+}
+#pods {
+  height: 175px;
+  border-radius: 10px;
+  background: url("/images/vapepod.png") no-repeat #312f2f;
+  background-size: 50px;
+  background-position: center;
+}
+#disposable {
+  height: 175px;
+  border-radius: 10px;
+  background: url("/images/vapedisposable.png") no-repeat #312f2f;
+  background-size: 50px;
+  background-position: center;
+}
+#h3 {
+  padding: 30px 0 8px;
+  position: relative;
+}
+
+#h3::before {
+  content: "";
+  position: absolute;
+  left: 27%;
+  bottom: 10px;
+  width: 63%;
+  height: 10px;
+  transform:  translateX(-40%)  ;
+  clip-path: polygon(0 61%, 96% 46%, 98% 47%, 2% 100%);
+
+  border-radius: 100px;
+  background: rgba(250, 201, 5, 0.6);
+}
+
+.premiumImg{
+  width: 180px;
+}
+.newFlavorImg{
+  width: auto;
+  height: 250px;
+}
+
+  /** New Flavor **/
+  #newflavor {
+    position: relative;
+    height: 250px;
+  }
+  
+  .newFlavorStack {
+    height: 250px;
+    background-color: #312f2f;
+    border-radius: 10px;
+  }
