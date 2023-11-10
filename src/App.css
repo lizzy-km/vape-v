@@ -15,6 +15,29 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
+.carousel__dot-group {
+  display: flex ;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.buttonBack___1mlaL, .buttonFirst___2rhFr, .buttonLast___2yuh0, .buttonNext___2mOCa, .buttonNext___3Lm3s, .dot___3c3SI {
+  padding: 4px;
+  background-color: #312f2f57 !important;
+  border-radius: 100px;
+  transition: all .4s ease;
+}
+
+.carousel__dot--selected {
+  padding: 3px;
+  background-color: #312f2f !important;
+
+}
+
 .css-x9fn3p{
   line-height: 1.5;
   letter-spacing: 0.00938em;

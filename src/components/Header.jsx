@@ -12,9 +12,9 @@ const Header = () => {
         <div className=" max-[500px]:w-full  w-[90%] flex p-2 justify-between items-center ">
           
           <div className=' cursor-pointer flex  gap-1 justify-center items-center ' >
-            <p className=' head text-white max-[500px]:text-[24px] text-[40px] font-semibold ' >PI</p>
+            <p className=' head text-white max-[500px]:text-[24px] text-[35px] font-semibold ' >PI</p>
             <div className=' flex justify-center items-center   max-h-[30px]  ' >
-            <img className=' max-[500px]:w-[40px] w-[70px]  object-right  ' src="../images/logo.png" alt="logo" />
+            <img className=' max-[500px]:w-[40px] w-[60px]  object-right  ' src="../images/logo.png" alt="logo" />
 
             </div>
           </div>

@@ -83,7 +83,7 @@ const Home = () => {
 
         naturalSlideWidth={100}
         naturalSlideHeight={mobile ? 150 : 40}
-        totalSlides={4}
+        totalSlides={ mobile?  3: 4}
         infinite={true}
         isPlaying={ slide == true? false : true}
 
@@ -107,7 +107,7 @@ const Home = () => {
           }
         </Slider>
 
-        <DotGroup></DotGroup>
+        
         <div className=" flex top-0 absolute p-2 h-full z-[999]  justify-center items-center  " >
         <ButtonBack  className=' hover:bg-[#2121214e] transition-all  h-[20%] bg-[#21212168] rounded-full ' >
           <ArrowBackIosOutlinedIcon sx={{ color: "white", padding:'4px' }} />
@@ -120,7 +120,8 @@ const Home = () => {
         </ButtonNext>
         </div>
 
-        
+        <DotGroup>
+  </DotGroup>
        
       </CarouselProvider>
       

@@ -64,7 +64,7 @@ const NewReleased = () => {
                    <ReleasedCard product={product} key={i}  />   
                 ))}
             </div>
-            <button  className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full w-[10rem] p-2 capitalize ">View More <ArrowForwardIosOutlinedIcon fontSize="small"/></button>
+            <button  className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full w-[16rem] p-2 capitalize ">View More <ArrowForwardIosOutlinedIcon fontSize="small"/></button>
         </Stack>
   )
 }
