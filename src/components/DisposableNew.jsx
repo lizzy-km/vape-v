@@ -82,7 +82,7 @@ const DisposableNew = () => {
                 </div>
               </Stack>
             </div>
-            <div  className=" h-[280px]  transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%]  w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+            <div  className=" max-[500px]:h-[165px] h-[280px]  transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%]  w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
                   id="cardD"
                   className=" left-[0rem]  absolute top-4  transition-all gap-2 w-full flex "
