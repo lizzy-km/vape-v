@@ -68,7 +68,7 @@ const BestDeals = () => {
 
             <div className=" flex max-[500px]:flex-col my-6 w-[92%] justify-evenly max-[500px]:gap-6 gap-0 items-center " >
                 {data?.slice(0, 6).map((product, i) => (
-                    <VapeCard key={i} i={i} product={product} />
+                    <VapeCard key={i + product.id} i={i} product={product} />
                 ))}
             </div>
             <button  className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full w-[10rem] p-2 capitalize ">View More <ArrowForwardIosOutlinedIcon fontSize="small"/></button>

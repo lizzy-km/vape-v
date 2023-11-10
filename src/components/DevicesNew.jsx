@@ -11,7 +11,7 @@ const DevicesNew = () => {
   const [slide, setSlide] = useState(0);
 
   const slideNext = () => {
-    setSlide(slide +1);
+    setSlide(slide + 1);
     
   };
 
@@ -25,15 +25,15 @@ const DevicesNew = () => {
     let limit = 12 * slide
 
     if (limit > 25 ) {
-        card?.classList.add(`translate-x-[0rem]`)
+        card?.classList.add(`left-[0rem]`)
         setSlide(0)
     }
-    card?.classList.add(`-translate-x-[${12 * slide}rem]`)
-    card?.classList.remove(`-translate-x-[${trn}rem]`)
-    card?.classList.remove(`translate-x-[0rem]`)
-    card?.classList.remove(`-translate-x-[36rem]`)
+    card?.classList.add(`-left-[${12 * slide}rem]`)
+    card?.classList.remove(`-left-[${trn}rem]`)
+    card?.classList.remove(`left-[0rem]` )
+    card?.classList.remove(`-left-[36rem]`)
 
-    
+    console.log(card);
   }, [slide]);
 
   return (
@@ -51,8 +51,8 @@ const DevicesNew = () => {
         (cate, i) =>
           cate.name === "Devices" && (
             <div
-              className=" relative max-[500px]:flex-col flex w-full justify-between items-center "
-              key={i}
+              className=" h-full relative max-[500px]:flex-col flex w-full justify-between items-center "
+              key={cate.name + i}
             >
               <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-4 justify-center items-center ">
                 <Stack
@@ -84,13 +84,14 @@ const DevicesNew = () => {
                   </div>
                 </Stack>
               </div>
-              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+              <div  className=" h-[280px]  transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%]  w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
                   id="card"
-                  className="   transition-all gap-2 w-full flex "
+                  className=" left-[0rem]  absolute top-4  transition-all gap-2 w-full flex "
                 >
-                  {cate?.productListBuyers.slice(0, 6).map((product, i) => (
-                    <div key={i} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
+                  {cate?.productListBuyers?.slice(0, 6).map((product, i) => (
+
+                    <div key={i + product.name} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
                       <img
                         src={product.url}
                         className=" w-[100%] rounded-lg "
