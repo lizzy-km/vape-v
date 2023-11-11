@@ -105,7 +105,7 @@ const DevicesNew = () => {
                         <Typography
                           sx={{
                             color: "white",
-                            fontSize: mobile ? "10px" : "14px",
+                            fontSize: mobile ? "15px" : "15px",
                           }}
                         >
                           {product.name}
@@ -119,7 +119,7 @@ const DevicesNew = () => {
                               sx={{
                                 color: "gold",
                                 textDecoration: "line-through",
-                                fontSize: mobile ? "10px" : "14px",
+                                fontSize: mobile ? "14px" : "14px",
                               }}
                             >
                               {product.originalPrice} Ks
@@ -129,7 +129,7 @@ const DevicesNew = () => {
                           <Typography
                             sx={{
                               color: "gold",
-                              fontSize: mobile ? "10px" : "14px",
+                              fontSize: mobile ? "10px" : "10px",
                             }}
                           >
                             {product.originalPrice} MMK
@@ -146,7 +146,7 @@ const DevicesNew = () => {
                           >
                             <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
                           </svg>
-                          <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[10px] text-[12px] ">
+                          <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[12px] text-[12px] ">
                             {" "}
                             600 Points{" "}
                           </p>
