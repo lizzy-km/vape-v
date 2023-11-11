@@ -20,7 +20,7 @@ const PodsNew = () => {
   useEffect(() => {
     let limit = 12 * slide;
 
-    let cardNum = mobile ? 36 : tablet ? 60 : 24
+    let cardNum = mobile ? 60 : tablet ? 60 : 24
     if (limit > cardNum) {
       setSlide(0);
     }
