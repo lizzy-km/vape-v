@@ -6,9 +6,7 @@ import "./slide.css";
 import DevicesData from "./DevicesData";
 
 const DevicesNew = () => {
-
-  const {devices} = DevicesData()
-
+  const { devices } = DevicesData();
 
   const { mobile, tablet, desktop } = useResponsive();
 
@@ -18,14 +16,12 @@ const DevicesNew = () => {
     setSlide(slide + 1);
   };
 
- 
-
   useEffect(() => {
     let limit = 12 * slide;
 
-    let cardNum = mobile ? 60 : tablet ? 48 : 24
+    let cardNum = mobile ? 60 : tablet ? 48 : 24;
 
-    if (limit > cardNum ) {
+    if (limit > cardNum) {
       setSlide(0);
     }
   }, [slide]);
@@ -34,10 +30,11 @@ const DevicesNew = () => {
     <div
       className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5  "
       style={{
-        background: "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv1.png)",
+        background:
+          "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv1.png)",
         backgroundRepeat: "no-repeat",
         // backgroundColor: "#312f2f",
-        backgroundSize:mobile ?  "400%" : "100%",
+        backgroundSize: mobile ? "400%" : "100%",
         backgroundPosition: "left center",
       }}
     >
@@ -54,15 +51,15 @@ const DevicesNew = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  {
-                    !mobile &&  <img
-                    src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedevice.png?raw=true"
-                    className=" w-[90px] h-auto "
-                    style={{ borderRadius: "10px" }}
-                  />
-                  }
-                 
-                 <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center " >
+                  {!mobile && (
+                    <img
+                      src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedevice.png?raw=true"
+                      className=" w-[90px] h-auto "
+                      style={{ borderRadius: "10px" }}
+                    />
+                  )}
+
+                  <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center ">
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -72,7 +69,7 @@ const DevicesNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className=' max-[500px]:w-full w-[70%]'
+                      className=" max-[500px]:w-full w-[70%]"
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
@@ -90,67 +87,66 @@ const DevicesNew = () => {
                   }}
                   className="   transition-all gap-2 w-full flex "
                 >
-                  {
-                    cate.productListBuyers.slice(0, 6).map((product, i) => (
-                      <div
-                        key={i}
-                        className=" p-6 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
+                  {cate.productListBuyers.slice(0, 6).map((product, i) => (
+                    <div
+                      key={i}
+                      className=" p-6 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
+                    >
+                      <img
+                        src={product.url}
+                        className=" cursor-pointer w-[100%] rounded-lg "
+                      />
+                      <Typography
+                        sx={{
+                          color: "white",
+                          fontSize: mobile ? "15px" : "15px",
+                        }}
                       >
-                        <img
-                          src={product.url}
-                          className=" cursor-pointer w-[100%] rounded-lg "
-                        />
-                        <Typography
-                          sx={{
-                            color: "white",
-                            fontSize: mobile ? "15px" : "15px",
-                          }}
-                        >
-                          {product.name}
-                        </Typography>
-                        {product.promotePrice > 0 ? (
-                          <>
-                            <Typography sx={{ color: "white" }}>
-                              {product.promotePrice} Ks
-                            </Typography>
-                            <Typography
-                              sx={{
-                                color: "gold",
-                                textDecoration: "line-through",
-                                fontSize: mobile ? "14px" : "14px",
-                              }}
-                            >
-                              {product.originalPrice} Ks
-                            </Typography>
-                          </>
-                        ) : (
+                        {product.name}
+                      </Typography>
+                      {product.promotePrice > 0 ? (
+                        <>
+                          <Typography sx={{ color: "white" }}>
+                            {product.promotePrice} Ks
+                          </Typography>
                           <Typography
                             sx={{
                               color: "gold",
-                              fontSize: mobile ? "10px" : "10px",
+                              textDecoration: "line-through",
+                              fontSize: mobile ? "14px" : "14px",
                             }}
                           >
-                            {product.originalPrice} MMK
+                            {product.originalPrice} Ks
                           </Typography>
-                        )}
+                        </>
+                      ) : (
+                        <Typography
+                          sx={{
+                            color: "gold",
+                            fontSize: mobile ? "10px" : "10px",
+                          }}
+                        >
+                          {product.originalPrice} MMK
+                        </Typography>
+                      )}
 
-                        <div className=" flex justify-center items-center ">
-                          <svg
-                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
-                            focusable="false"
-                            aria-hidden="true"
-                            viewBox="0 0 24 24"
-                            data-testid="StarIcon"
-                          >
-                            <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                          </svg>
-                          <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[12px] text-[12px] ">
-                            {" "}
-                            600 Points{" "}
-                          </p>
-                        </div>
+                      <div className=" flex justify-center items-center ">
+                        <svg
+                          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
+                          focusable="false"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          data-testid="StarIcon"
+                        >
+                          <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                        </svg>
+                        <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[12px] text-[12px] ">
+                          {" "}
+                          600 Points{" "}
+                        </p>
                       </div>
-                    ))}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className=" top-0 h-[65%] flex max-[500px]:items-end justify-center items-center absolute max-[500px]:right-[-4%] right-[2%]">

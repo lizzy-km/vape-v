@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import DevicesData from "./DevicesData";
 
 const DisposableNew = () => {
-  const { devices } = DevicesData()
+  const { devices } = DevicesData();
   const [slide, setSlide] = useState(0);
   const { mobile, tablet, desktop } = useResponsive();
 
@@ -13,11 +13,9 @@ const DisposableNew = () => {
     setSlide(slide + 1);
   };
 
-  
-
   useEffect(() => {
     let limit = 12 * slide;
-    let cardNum = mobile ? 60 : tablet ? 48 : 24
+    let cardNum = mobile ? 60 : tablet ? 48 : 24;
 
     if (limit > cardNum) {
       setSlide(0);
@@ -25,11 +23,12 @@ const DisposableNew = () => {
   }, [slide]);
   return (
     <div
-    className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[1.8rem] "
-    style={{
-        background: "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv3.png)",
+      className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[1.8rem] "
+      style={{
+        background:
+          "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv3.png)",
         backgroundRepeat: "no-repeat",
-        backgroundSize:mobile ?  "400%" : "100%",
+        backgroundSize: mobile ? "400%" : "100%",
         backgroundPosition: "left center",
       }}
     >
@@ -46,15 +45,15 @@ const DisposableNew = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  {
-                    !mobile &&  <img
-                    src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedisposable.png?raw=true"
-                    className=" w-[50px] h-auto "
-                    style={{ borderRadius: "10px" }}
-                  />
-                  }
-                 
-                 <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center " >
+                  {!mobile && (
+                    <img
+                      src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedisposable.png?raw=true"
+                      className=" w-[50px] h-auto "
+                      style={{ borderRadius: "10px" }}
+                    />
+                  )}
+
+                  <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center ">
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -64,7 +63,7 @@ const DisposableNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className=' max-[500px]:w-full w-[70%] text-wrap  '
+                      className=" max-[500px]:w-full w-[70%] text-wrap  "
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}

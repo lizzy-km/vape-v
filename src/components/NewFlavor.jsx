@@ -7,7 +7,6 @@ const NewFlavor = () => {
   const { flavor } = DevicesData();
   const { mobile, tablet, desktop } = useResponsive();
 
- 
   const slideNext = () => {
     const card = document.getElementById("cardF");
 
@@ -22,12 +21,22 @@ const NewFlavor = () => {
         {flavor?.map((banner, i) =>
           mobile
             ? banner.isWeb === 0 && (
-                <div key={i} className="rounded-lg cursor-pointer h-full   min-w-[96%]  ">
-                  <img className="  object-cover "  src={banner.url} style={{ borderRadius: "10px" }} />
+                <div
+                  key={i}
+                  className="rounded-lg cursor-pointer h-full   min-w-[96%]  "
+                >
+                  <img
+                    className="  object-cover "
+                    src={banner.url}
+                    style={{ borderRadius: "10px" }}
+                  />
                 </div>
               )
             : banner.isWeb === 1 && (
-                <div key={i} className="  rounded-[9px] cursor-pointer  min-w-[98%]  ">
+                <div
+                  key={i}
+                  className="  rounded-[9px] cursor-pointer  min-w-[98%]  "
+                >
                   <img src={banner.url} style={{ borderRadius: "10px" }} />
                 </div>
               )

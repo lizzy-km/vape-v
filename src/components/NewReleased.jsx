@@ -1,8 +1,5 @@
-import { Stack, Typography, Grid, Button, Box } from "@mui/material";
-//import { useQuery } from "@tanstack/react-query"
-//import axios from "axios"
+import { Stack, Typography } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import { useGetNewReleased } from "../banner-list-query";
 import ReleasedCard from "./ReleasedCard";
 import useResponsive from "./useResponsive";
 
@@ -77,10 +74,11 @@ const NewReleased = () => {
         </Typography>
       </div>
 
-      <Typography className=' font-medium '
-      style={{
-        fontSize: mobile ? '14px' :'16px'
-      }}
+      <Typography
+        className=" font-medium "
+        style={{
+          fontSize: mobile ? "14px" : "16px",
+        }}
       >
         Try Out Our Latest Flavour Here
       </Typography>

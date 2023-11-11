@@ -21,7 +21,7 @@ const PodsNew = () => {
   useEffect(() => {
     let limit = 12 * slide;
 
-    let cardNum = mobile ? 60 : tablet ? 48 : 24
+    let cardNum = mobile ? 60 : tablet ? 48 : 24;
     if (limit > cardNum) {
       setSlide(0);
     }
@@ -31,9 +31,10 @@ const PodsNew = () => {
     <div
       className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[1.8rem] "
       style={{
-        background: "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv2.png)",
+        background:
+          "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv2.png)",
         backgroundRepeat: "no-repeat",
-        backgroundSize:mobile ?  "400%" : "100%",
+        backgroundSize: mobile ? "400%" : "100%",
         backgroundPosition: "left center",
       }}
     >
@@ -50,15 +51,15 @@ const PodsNew = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  {
-                    !mobile &&  <img
-                    src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapepod.png?raw=true"
-                    className=" w-[50px] h-auto "
-                    style={{ borderRadius: "10px" }}
-                  />
-                  }
-                 
-                 <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center " >
+                  {!mobile && (
+                    <img
+                      src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapepod.png?raw=true"
+                      className=" w-[50px] h-auto "
+                      style={{ borderRadius: "10px" }}
+                    />
+                  )}
+
+                  <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center ">
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -68,7 +69,7 @@ const PodsNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className=' max-[500px]:w-full w-[70%]'
+                      className=" max-[500px]:w-full w-[70%]"
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
