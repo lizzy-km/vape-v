@@ -77,7 +77,7 @@ const Home = () => {
 
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={mobile ? 157 : 52}
+        naturalSlideHeight={mobile ? 157 : 46.8}
         totalSlides={isLoading == false ? 1 : mobile ? 3 : 4}
         infinite={true}
         isPlaying={true}
@@ -108,7 +108,7 @@ const Home = () => {
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
-                        className="  h-screen  relative object-cover "
+                        className="  h-[90vh]  relative object-cover "
                       />
                     </Slide>
                   )
@@ -129,7 +129,7 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[6.3rem] bottom-14  " >
+                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[3rem] bottom-2  " >
                     <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
                     </div>
         
