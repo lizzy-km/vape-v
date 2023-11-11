@@ -77,7 +77,7 @@ const Home = () => {
 
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={mobile ? 157 : 44}
+        naturalSlideHeight={mobile ? 157 : 41.7}
         totalSlides={isLoading == false ? 1 : mobile ? 3 : 4}
         infinite={true}
         isPlaying={true}
@@ -108,7 +108,7 @@ const Home = () => {
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
-                        className="  h-[70vh]  relative object-cover "
+                        className="  w-[100%]  relative object-cover "
                       />
                     </Slide>
                   )
