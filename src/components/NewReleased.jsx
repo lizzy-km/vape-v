@@ -9,7 +9,8 @@ const NewReleased = () => {
   const data = [
     {
       id: "1",
-      background: "/public/images/fruit1.png",
+      background:
+        "https://github.com/lizzy-km/vape-v/blob/main/public/images/fruit1.png?raw=true",
       url: "/images/strawberry.png",
       bgClass: "#c9586a",
       name: "Strawberry Yougurt with Refreshing flavour",
@@ -18,7 +19,8 @@ const NewReleased = () => {
     },
     {
       id: "2",
-      background: "/public/images/fruit2.png",
+      background:
+        "https://github.com/lizzy-km/vape-v/blob/main/public/images/fruit2.png?raw=true",
       url: "/images/citrus.png",
       bgClass: " #f3b78a ",
       name: "Strawberry Yougurt with Refreshing flavour",
@@ -27,7 +29,8 @@ const NewReleased = () => {
     },
     {
       id: "3",
-      background: "/public/images/mintleaf.png",
+      background:
+        "https://github.com/lizzy-km/vape-v/blob/main/public/images/mintleaf.png?raw=true",
       url: "/images/blue.png",
       bgClass: " #4b60ea ",
       name: "Strawberry Yougurt with Refreshing flavour",
@@ -37,7 +40,8 @@ const NewReleased = () => {
 
     {
       id: "4",
-      background: "/public/images/fruit3.png",
+      background:
+        "https://github.com/lizzy-km/vape-v/blob/main/public/images/fruit3.png?raw=true",
       url: "/images/green.png",
       bgClass: " #62d450 ",
       name: "Strawberry Yougurt with Refreshing flavour",
@@ -51,7 +55,7 @@ const NewReleased = () => {
       justifyContent={"center"}
       alignItems={"center"}
       my={7}
-    //   mx={1}
+      //   mx={1}
     >
       <div className=" flex gap-1 ">
         <Typography
