@@ -110,13 +110,14 @@ const Member = () => {
               justifyContent={"center"}
               alignItems={"flex-start"}
               p={2}
-              sx={{ backgroundColor: "#312f2f", opacity: "80%" }}
+              sx={{ backgroundColor: "#312f2f", opacity: "80%", borderRadius:'10px' }}
             >
               <Stack
                 direction={"row"}
                 justifyContent={"space-between"}
                 alignItems={"center"}
                 width={"100%"}
+                
               >
                 <Typography
                   sx={{
@@ -146,13 +147,16 @@ const Member = () => {
               justifyContent={"center"}
               alignItems={"flex-start"}
               p={2}
-              sx={{ backgroundColor: "#312f2f", opacity: "80%" }}
+              sx={{ backgroundColor: "#312f2f", opacity: "80%", borderRadius:'10px' }}
             >
               <Stack
                 direction={"row"}
                 justifyContent={"space-between"}
                 alignItems={"center"}
                 width={"100%"}
+                sx={{
+                    borderRadius:'10px'
+                }}
               >
                 <Typography
                   sx={{

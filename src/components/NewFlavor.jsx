@@ -10,7 +10,7 @@ import {
   DotGroup,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { useGetAllBannerList, useGetBannerList } from "../banner-list-query";
+import {  useGetBannerList } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 
 const NewFlavor = () => {
