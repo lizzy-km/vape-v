@@ -12,11 +12,13 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import { useGetBannerList } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useState } from "react";
+import Loader from "./Loader";
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(false)
   const {data} = useGetBannerList("heroBanner", 1, {
     onSuccess(data){
-
+      setIsLoading(true)
     }
   })
 
@@ -37,17 +39,23 @@ const Home = () => {
  const hideDetail = () => {
   const detail = document.getElementById('detail')
 
-  detail.classList.add('h-0')
-  detail.classList.remove('h-auto')
-  detail.classList.add('p-[0px]')
-  detail.classList.remove('p-[2%]')
-  detail.classList.add('opacity-0')
-  detail.classList.remove('opacity-1')
+  detail.classList.add('h-auto')
+  detail.classList.remove('h-0')
+  detail.classList.add('p-[2%]')
+  detail.classList.remove('p-[0px]')
+  detail.classList.add('opacity-1')
+  detail.classList.remove('opacity-0')
+  // detail.classList.add('h-0')
+  // detail.classList.remove('h-auto')
+  // detail.classList.add('p-[0px]')
+  // detail.classList.remove('p-[2%]')
+  // detail.classList.add('opacity-0')
+  // detail.classList.remove('opacity-1')
  }
 
  const { mobile, tablet, desktop } = useResponsive();
 
- if (mobile) {
+ if (mobile || desktop) {
   const detail = document.getElementById('detail')
 
   detail?.classList.add('h-auto')
@@ -62,7 +70,7 @@ const Home = () => {
   return (
     <div onMouseLeave={ mobile ? null: hideDetail} onMouseEnter={showDetail} className=" overflow-hidden cursor-pointer flex w-full h-auto relative " >
 
-      <div  className=" bg-[#21212155]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  " >
+      <div  className=" bg-[#21212181]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  " >
         <div id="detail" className="  w-full flex flex-col items-center transition-all justify-center text-white h-0 opacity-0  p-[0px]    " >
           <p className=" font-thin font-sans max-[500px]:text-md text-xl " >
             The Best Look
@@ -83,15 +91,21 @@ const Home = () => {
 
         naturalSlideWidth={100}
         naturalSlideHeight={mobile ? 150 : 40}
-        totalSlides={ mobile?  3: 4}
+        totalSlides={ isLoading == false ? 1: mobile?  3: 4}
         infinite={true}
-        isPlaying={ slide == true? false : true}
+        isPlaying={  true}
 
         className='  relative w-full h-auto  '
         
       >
         <Slider>
+
           {
+            isLoading == false && <Slide  index={0}>
+             <Loader/>   </Slide>
+          }
+
+          { isLoading &&
            mobile == true ? data?.map((banner, i) => (
             banner.isWeb === 0 && (
               <Slide key={i} index={i}>

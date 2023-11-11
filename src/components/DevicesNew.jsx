@@ -6,7 +6,12 @@ import { useEffect, useState } from "react";
 import './slide.css'
 
 const DevicesNew = () => {
-  const { data } = useGetDevices();
+  const [isLoading, setIsLoading] = useState(true)
+  const { data } = useGetDevices({
+    onSuccess(data){
+      setIsLoading(false)
+    }
+  });
   const { mobile, tablet, desktop } = useResponsive();
 
   const [slide, setSlide] = useState(0);
@@ -85,7 +90,8 @@ const DevicesNew = () => {
                   }}
                   className="   transition-all gap-2 w-full flex "
                 >
-                  {cate?.productListBuyers.slice(0, 6).map((product, i) => (
+                  
+                  { !isLoading && cate.productListBuyers.slice(0, 6).map((product, i) => (
                     <div key={i} className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
                       <img
                         src={product.url}

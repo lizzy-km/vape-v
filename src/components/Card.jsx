@@ -10,7 +10,6 @@ const Card = ({product,slide}) => {
       card?.classList.add(`translate-x-[${-23 * slide}%]`)
       card?.classList.remove(`translate-x-[${(-23 * slide)+23}%]`)
   
-      console.log(card);
     },[slide])
   
    

@@ -67,6 +67,7 @@ const BestDeals = () => {
             <Typography variant="h6">Just for you</Typography>
 
             <div className=" flex max-[500px]:flex-col my-6 w-[92%] justify-evenly max-[500px]:gap-6 gap-0 items-center " >
+                
                 {data?.slice(0, 6).map((product, i) => (
                     <VapeCard key={i + product.id} i={i} product={product} />
                 ))}
