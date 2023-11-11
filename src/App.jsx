@@ -29,6 +29,7 @@ const App = () => {
           <Header />
       <Routes>
         <Route exact path="/" element={<Landing/>} />
+        <Route exact path="/*" element={<Landing/>} />
       </Routes>
       </div>
     </BrowserRouter>

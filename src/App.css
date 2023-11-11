@@ -133,3 +133,7 @@ body {
   background-color: #312f2f;
   border-radius: 10px;
 }
+
+.active svg {
+  color: yellow;
+}
