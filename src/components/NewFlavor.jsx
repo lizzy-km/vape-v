@@ -43,7 +43,7 @@ const NewFlavor = () => {
               )
         )}
       </div>
-      <div className=" top-0 h-[100%] flex  justify-center items-center absolute right-4 ">
+      <div className=" top-0 h-[100%] flex   justify-center items-center absolute right-[1%] ">
         <div
           onClick={slideNext}
           className=" flex justify-center items-center max-[500px]:h-[30%] h-[60%] backdrop-blur px-1 rounded-lg cursor-pointer transition-all active:bg-[#212121c4] hover:bg-[#21212153] bg-[#21212184] "

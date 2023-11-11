@@ -96,7 +96,7 @@ const DevicesNew = () => {
                     cate.productListBuyers.slice(0, 6).map((product, i) => (
                       <div
                         key={i}
-                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
+                        className=" p-6 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
                       >
                         <img
                           src={product.url}
@@ -155,7 +155,7 @@ const DevicesNew = () => {
                     ))}
                 </div>
               </div>
-              <div className=" top-0 h-[79%] flex max-[500px]:items-end justify-center items-center absolute right-4 ">
+              <div className=" top-0 h-[65%] flex max-[500px]:items-end justify-center items-center absolute max-[500px]:right-[-4%] right-[2%]">
                 <div
                   onClick={slideNext}
                   className=" flex justify-center items-center max-[500px]:h-[20%] h-[40%] backdrop-blur px-1 rounded-lg cursor-pointer transition-all active:bg-[#212121c4] hover:bg-[#21212153] bg-[#21212184] "
