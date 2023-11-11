@@ -6,7 +6,7 @@ export const useGetBannerList = (key, bannerNum, options) => {
     queryKey: [`${key}`],
     queryFn: async () => {
       return await base
-        .get(`/Miscellaneous/GetBannerList?bannerType=${bannerNum}`)
+        .get(`/`)
         .then((res) => res.data)
         .catch((err) => console.log(err));
     },

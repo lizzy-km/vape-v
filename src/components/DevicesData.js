@@ -1,4 +1,5 @@
 const DevicesData = () => {
+    
   const devices = [
     {
       id: 39,
