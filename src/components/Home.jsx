@@ -78,16 +78,16 @@ const Home = () => {
           id="detail"
           className="  w-full flex flex-col items-center transition-all justify-center text-white h-0 opacity-0  p-[0px]    "
         >
-          <p className=" font-thin font-sans max-[500px]:text-md text-xl ">
+          <p className=" font-thin font-sans max-[500px]:text-md text-2xl ">
             The Best Look
           </p>
-          <h1 className=" font-bold max-[500px]:text-2xl text-4xl font-sans  ">
+          <h1 className=" font-bold max-[500px]:text-2xl text-5xl font-sans  ">
             Anytime Anywhere
           </h1>
-          <p className=" font-thin p-3 font-sans max-[500px]:text-sm text-lg ">
+          <p className=" font-thin p-3 font-sans max-[500px]:text-sm text-xl ">
             Start with 10,000 MMK
           </p>
-          <div className=" max-[500px]:text-md transition-colors bg-[#2121219e] backdrop-blur-md hover:bg-[#2121214e] cursor-pointer max-[500px]:px-[1rem] max-[500px]:py-[.1rem] px-[1.2rem] py-[.3rem] rounded-full font-thin font-sans text-lg ">
+          <div className=" max-[500px]:text-md transition-colors bg-[#2121219e] backdrop-blur-md hover:bg-[#2121214e] cursor-pointer max-[500px]:px-[1rem] max-[500px]:py-[.1rem] px-[2rem] py-[.7rem] rounded-full font-thin font-sans text-xl ">
             View
           </div>
         </div>
@@ -147,9 +147,7 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-        <DotGroup
-        className=' max-[500px]:bottom-[10%] bottom-3 '
-        ></DotGroup>
+        <DotGroup className=" max-[500px]:bottom-[10%] bottom-3 "></DotGroup>
       </CarouselProvider>
     </div>
   );

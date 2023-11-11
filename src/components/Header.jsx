@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <div className=" z-[9999] bg-[#1818184e] fixed w-full flex max-[500px]:h-[40px]  h-[60px]  justify-center items-center  ">
       <div className=" max-[500px]:w-full  w-[91.5%] flex p-2 justify-between items-center ">
-        <div className=" cursor-pointer flex  gap-1 justify-center items-center ">
-          <p className=" head text-white max-[500px]:text-[24px] text-[35px] font-semibold ">
+        <div className=" cursor-pointer flex  gap-2 justify-center items-center ">
+          <p className=" head text-white max-[500px]:text-[24px] text-[34px] font-semibold ">
             PI
           </p>
           <div className=" flex justify-center items-center   max-h-[30px]  ">
