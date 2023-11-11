@@ -59,7 +59,7 @@ const Member = () => {
           )}
         </Stack>
       </Grid>
-      <Grid item lg={2.5} xs={6}>
+      <Grid item lg={2.5}  xs={6}>
         <Stack
           direction={"column"}
           justifyContent={"space-between"}
@@ -98,7 +98,7 @@ const Member = () => {
           </Stack>
         </Stack>
       </Grid>
-      <Grid item lg={2.5} xs={6}>
+      <Grid item lg={2.5}  xs={6}>
         <Stack direction={"column"} rowGap={1}>
           <Box
             display={"flex"}

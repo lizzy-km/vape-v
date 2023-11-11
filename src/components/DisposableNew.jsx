@@ -40,7 +40,7 @@ const DisposableNew = () => {
               className=" relative max-[500px]:flex-col flex w-full justify-between items-center "
               key={i}
             >
-              <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-0 justify-start items-center ">
+              <div className=" max-[500px]:min-w-[100%] min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-0 max-[500px]:justify-center justify-start items-center ">
                 <Stack
                   direction={"row"}
                   justifyContent={"center"}
@@ -54,7 +54,7 @@ const DisposableNew = () => {
                   />
                   }
                  
-                  <div className="  w-[70%] flex-wrap justify-start items-center " >
+                 <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center " >
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -64,7 +64,7 @@ const DisposableNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className=' w-[70%] text-wrap  '
+                    className=' max-[500px]:w-full w-[70%] text-wrap  '
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}

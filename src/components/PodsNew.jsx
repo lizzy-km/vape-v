@@ -57,7 +57,7 @@ const PodsNew = () => {
                   />
                   }
                  
-                  <div>
+                 <div className=" flex flex-col w-full items-start justify-center max-[500px]:items-center " >
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -67,7 +67,7 @@ const PodsNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className='w-[70%]'
+                    className=' max-[500px]:w-full w-[70%]'
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
