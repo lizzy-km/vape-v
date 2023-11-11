@@ -4,8 +4,12 @@ import { useGetDevices } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useEffect, useState } from "react";
 import "./slide.css";
+import DevicesData from "./DevicesData";
 
 const DevicesNew = () => {
+
+  const {devices} = DevicesData()
+
   const [isLoading, setIsLoading] = useState(true);
   const { data } = useGetDevices({
     onSuccess(data) {
@@ -43,7 +47,7 @@ const DevicesNew = () => {
         backgroundPosition: "left center",
       }}
     >
-      {data?.mainCategory.map(
+      {devices?.map(
         (cate, i) =>
           cate.name === "Devices" && (
             <div
