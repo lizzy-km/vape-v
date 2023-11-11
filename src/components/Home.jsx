@@ -67,33 +67,17 @@ const Home = () => {
   // }
 
   return (
-    <div
-      className=" overflow-hidden cursor-pointer flex w-full  relative "
+    <div id="hero"
+      className=" overflow-hidden cursor-pointer flex h-[100%] w-full  relative "
     >
       {/* <img className=" opacity-90 rounded-t-[30px] z-[99]    absolute w-[100%]   bottom-[5%] "  src="/public/images/homeB.png" alt="" /> */}
-      <div className=" bg-[#382e345e]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  ">
-        {/* <div
-          id="detail"
-          className="  w-full flex flex-col items-center transition-all justify-center text-white h-0 opacity-0  p-[0px]    "
-        >
-          <p className=" font-thin font-sans max-[500px]:text-md text-2xl ">
-            The Best Look
-          </p>
-          <h1 className=" font-bold max-[500px]:text-2xl text-5xl font-sans  ">
-            Anytime Anywhere
-          </h1>
-          <p className=" font-thin p-3 font-sans max-[500px]:text-sm text-xl ">
-            Start with 10,000 MMK
-          </p>
-          <div className=" max-[500px]:text-md transition-colors bg-[#2121219e] backdrop-blur-md hover:bg-[#2121214e] cursor-pointer max-[500px]:px-[1rem] max-[500px]:py-[.1rem] px-[2rem] py-[.7rem] rounded-full font-thin font-sans text-xl ">
-            View
-          </div>
-        </div> */}
+      <div className=" bg-[#382e3433]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  ">
+      
       </div>
 
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={mobile ? 157 : 45}
+        naturalSlideHeight={mobile ? 157 : 52}
         totalSlides={isLoading == false ? 1 : mobile ? 3 : 4}
         infinite={true}
         isPlaying={true}
@@ -124,7 +108,7 @@ const Home = () => {
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
-                        className="  w-[100%]  relative object-cover "
+                        className="  h-screen  relative object-cover "
                       />
                     </Slide>
                   )
@@ -132,20 +116,23 @@ const Home = () => {
         </Slider>
 
         <div className=" flex top-0 absolute p-2 h-full z-[999]  justify-center items-center  ">
-          <ButtonBack className=" hover:bg-[#2121214e] transition-all  h-[20%] bg-[#21212168] rounded-full ">
+          <ButtonBack className=" hover:bg-[#2121214e] transition-all px-1  h-[20%] bg-[#21212168] rounded-full ">
             <ArrowBackIosOutlinedIcon sx={{ color: "white", padding: "4px" }} />
           </ButtonBack>
         </div>
 
         <div className=" flex top-0 right-0 absolute z-[999]   p-2 h-full justify-center items-center  ">
-          <ButtonNext className="  hover:bg-[#2121214e] transition-all   h-[20%] bg-[#21212168] rounded-full ">
+          <ButtonNext className="  hover:bg-[#2121214e] transition-all px-1  h-[20%] bg-[#21212168] rounded-full ">
             <ArrowForwardIosOutlinedIcon
               sx={{ color: "white", padding: "4px" }}
             />
           </ButtonNext>
         </div>
 
-        <DotGroup className=" max-[500px]:bottom-[10%] bottom-3 "></DotGroup>
+                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[5.76rem] bottom-14  " >
+                    <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
+                    </div>
+        
       </CarouselProvider>
     </div>
   );

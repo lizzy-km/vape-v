@@ -24,20 +24,20 @@ const NewFlavor = () => {
     card.classList.toggle(mobile ? "translate-x-[-96%]" : "translate-x-[-98%]");
   };
   return (
-    <div className=" relative my-[1rem]   max-w-[100%] w-[100%] self-end overflow-hidden flex justify-end items-end ">
+    <div className=" relative my-[1rem]   max-w-[100%] w-[100%] self-end overflow-hidden rounded-lg flex justify-end items-end ">
       <div
         id="cardF"
-        className=" max-[500px]:max-w-[98%] max-w-[98%]  transition-all  flex gap-1 "
+        className=" max-[500px]:max-w-[98%] max-w-[98%] rounded-lg  transition-all  flex gap-1 "
       >
         {data?.map((banner, i) =>
           mobile
             ? banner.isWeb === 0 && (
-                <div key={i} className=" cursor-pointer  min-w-[96%]  ">
-                  <img src={banner.url} style={{ borderRadius: "10px" }} />
+                <div key={i} className="rounded-lg cursor-pointer h-full   min-w-[96%]  ">
+                  <img className="  object-cover "  src={banner.url} style={{ borderRadius: "10px" }} />
                 </div>
               )
             : banner.isWeb === 1 && (
-                <div key={i} className=" bg-[#480e0e8c] rounded-[9px] cursor-pointer  min-w-[98%]  ">
+                <div key={i} className="  rounded-[9px] cursor-pointer  min-w-[98%]  ">
                   <img src={banner.url} style={{ borderRadius: "10px" }} />
                 </div>
               )

@@ -36,18 +36,18 @@ const DevicesNew = () => {
     <div
       className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5  "
       style={{
-        background: "url(/public/images/ice.png)",
+        background: "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv1.png)",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "#312f2f",
-        backgroundSize: "300px",
-        backgroundPosition: "left bottom",
+        // backgroundColor: "#312f2f",
+        backgroundSize:mobile ?  "400%" : "100%",
+        backgroundPosition: "left center",
       }}
     >
       {data?.mainCategory.map(
         (cate, i) =>
           cate.name === "Devices" && (
             <div
-              className=" relative max-[500px]:flex-col flex w-full justify-between items-center "
+              className="rounded-lg relative max-[500px]:flex-col flex w-full justify-between items-center "
               key={i}
             >
               <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-4 justify-center items-center ">
@@ -56,11 +56,14 @@ const DevicesNew = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  <img
+                  {
+                    !mobile &&  <img
                     src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapedevice.png?raw=true"
                     className=" w-[90px] h-auto "
                     style={{ borderRadius: "10px" }}
                   />
+                  }
+                 
                   <div>
                     <Typography
                       variant="h4"
@@ -81,7 +84,7 @@ const DevicesNew = () => {
                   </div>
                 </Stack>
               </div>
-              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden    ">
                 <div
                   id=""
                   style={{
@@ -93,7 +96,7 @@ const DevicesNew = () => {
                     cate.productListBuyers.slice(0, 6).map((product, i) => (
                       <div
                         key={i}
-                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[130px] flex-col min-w-[191px]"
+                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
                       >
                         <img
                           src={product.url}

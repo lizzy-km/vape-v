@@ -30,11 +30,10 @@ const PodsNew = () => {
     <div
       className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[1.8rem] "
       style={{
-        background: "url(/public/images/coal.png)",
+        background: "url(https://vape-pi-shopdoora-khant-lin-tun.vercel.app/covers/pv2.png)",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "#312f2f",
-        backgroundSize: "300px",
-        backgroundPosition: "left bottom",
+        backgroundSize:mobile ?  "400%" : "100%",
+        backgroundPosition: "left center",
       }}
     >
       {data?.mainCategory.map(
@@ -50,11 +49,14 @@ const PodsNew = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  <img
+                  {
+                    !mobile &&  <img
                     src="https://github.com/lizzy-km/vape-v/blob/main/public/images/vapepod.png?raw=true"
                     className=" w-[50px] h-auto "
                     style={{ borderRadius: "10px" }}
                   />
+                  }
+                 
                   <div>
                     <Typography
                       variant="h4"
@@ -75,7 +77,7 @@ const PodsNew = () => {
                   </div>
                 </Stack>
               </div>
-              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[74.6%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+              <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[74.6%] gap-2 max-[500px]:p-2   p-2 overflow-hidden    ">
                 <div
                   id=""
                   style={{
@@ -86,7 +88,7 @@ const PodsNew = () => {
                   {cate?.productListBuyers.slice(0, 6).map((product, i) => (
                     <div
                       key={i}
-                      className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[130px] flex-col min-w-[191px]"
+                      className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[191px] flex-col min-w-[191px]"
                     >
                       <img
                         src={product.url}
