@@ -33,9 +33,12 @@ const App = () => {
 
   return (
     <QueryClientProvider client={client}>
-      <div onScroll={handleScroll} className=" relative flex w-full overflow-y-auto max-h-screen ">
+      <div onScroll={handleScroll} className=" relative flex max-[500px]:flex-col w-full overflow-y-auto max-h-screen ">
         <Header />
         <div className="  flex flex-col  items-center  w-full h-auto ">
+          <div className="  w-full max-[500px]:h-[40px] bg-[#212121] " >
+            
+          </div>
           <div className=" flex h-auto items-center  w-[100%] flex-col gap-2 ">
             <Home />
             <div className=" flex h-auto max-[500px]:gap-5  w-[94%] items-center justify-center flex-col gap-6 ">

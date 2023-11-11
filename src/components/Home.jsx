@@ -77,8 +77,8 @@ const Home = () => {
 
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={mobile ? 157 : 41.7}
-        totalSlides={isLoading == false ? 1 : mobile ? 3 : 4}
+        naturalSlideHeight={mobile ? 46 : 41.7}
+        totalSlides={isLoading == false ? 1 : mobile ? 4 : 4}
         infinite={true}
         isPlaying={true}
         className="  relative w-full h-auto  "
@@ -93,7 +93,7 @@ const Home = () => {
           {isLoading && mobile == true
             ? data?.map(
                 (banner, i) =>
-                  banner.isWeb === 0 && (
+                  banner.isWeb === 1 && (
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
@@ -129,8 +129,8 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[3rem] bottom-1  " >
-                    <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
+                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[0] bottom-1  " >
+                    <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] max-[500px]:px-[.6rem] max-[500px]:py-[0.4rem] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
                     </div>
         
       </CarouselProvider>
