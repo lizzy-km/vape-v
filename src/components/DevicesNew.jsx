@@ -20,9 +20,7 @@ const DevicesNew = () => {
     setSlide(slide + 1);
   };
 
-  const slidePrev = () => {
-    setSlide(slide - 1);
-  };
+ 
 
   useEffect(() => {
     let limit = 12 * slide;
