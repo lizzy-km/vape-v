@@ -107,7 +107,7 @@ const Member = () => {
             id="pods"
           >
             <Stack
-                        className=' backdrop-blur '
+                        className=' w-full backdrop-blur '
 
               direction={"column"}
               justifyContent={"center"}
@@ -148,7 +148,7 @@ const Member = () => {
             id="disposable"
           >
             <Stack
-            className=' backdrop-blur '
+            className=' w-full backdrop-blur '
               direction={"column"}
               justifyContent={"center"}
               alignItems={"flex-start"}
