@@ -76,7 +76,7 @@ const DisposableNew = () => {
                 </div>
               </Stack>
             </div>
-            <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+            <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[75%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
                   id=""
                   style={{
