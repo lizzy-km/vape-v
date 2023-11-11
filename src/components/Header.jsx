@@ -2,12 +2,19 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DensityMediumOutlinedIcon from "@mui/icons-material/DensityMediumOutlined";
 import useResponsive from "./useResponsive";
+import Scroll from "../Scroll";
 
 const Header = () => {
   const { mobile, tablet, desktop } = useResponsive();
 
+
+
+
+
   return (
-    <div className=" z-[9999] bg-[#1818184e] fixed w-full flex max-[500px]:h-[40px]    justify-center items-center  ">
+    <div
+    id="navBar"
+     className=" z-[9999] bg-[#21212100] transition-all fixed w-full flex max-[500px]:h-[40px]    justify-center items-center  ">
       <div className=" max-[500px]:w-full  w-[91.5%] flex p-1 justify-between items-center ">
         <div className=" cursor-pointer flex  gap-2 justify-center items-center ">
           <p className=" head text-white max-[500px]:text-[24px] text-[34px] font-semibold ">

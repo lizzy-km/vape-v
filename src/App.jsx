@@ -10,13 +10,30 @@ import Member from "./components/Member";
 import NewFlavor from "./components/NewFlavor";
 import NewReleased from "./components/NewReleased";
 import PodsNew from "./components/PodsNew";
+import Scroll from "./Scroll";
 
 const App = () => {
   const client = new QueryClient();
 
+  const { handleScroll, isScroll } = Scroll()
+
+  if (isScroll == true) {
+    const navBar =  document.getElementById('navBar')
+
+    navBar?.classList.add('bg-[#18181889]')
+    navBar?.classList.remove('bg-[#21212100]')
+  }else {
+    const navBar =  document.getElementById('navBar')
+
+    navBar?.classList.remove('bg-[#18181889]')
+    navBar?.classList.add('bg-[#21212100]')
+  }
+
+  
+
   return (
     <QueryClientProvider client={client}>
-      <div className=" relative flex w-full overflow-y-auto max-h-screen ">
+      <div onScroll={handleScroll} className=" relative flex w-full overflow-y-auto max-h-screen ">
         <Header />
         <div className="  flex flex-col  items-center  w-full h-auto ">
           <div className=" flex h-auto items-center  w-[100%] flex-col gap-2 ">

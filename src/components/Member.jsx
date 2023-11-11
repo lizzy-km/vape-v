@@ -44,7 +44,7 @@ const Member = () => {
               Be a Vape Pi member and get our exclusive offers
             </Typography>
             <button
-              className=" bg-[#212121c7] text-white font-sans px-[1rem] py-[.2rem] hover:bg-[#4a4a4a55] rounded-3xl "
+              className=" bg-[#212121d5] border my-[1rem] text-white font-sans px-[1rem] py-[.2rem] hover:bg-[#4a4a4a55] rounded-3xl "
               id="slideButton"
             >
               View
@@ -80,6 +80,7 @@ const Member = () => {
               width={"100%"}
             >
               <Typography
+              className=' hover:text-yellow-400 cursor-pointer '
                 sx={{
                   color: "white",
                   typography: { lg: "subtitle1", xs: "subtitle2" },
@@ -106,11 +107,13 @@ const Member = () => {
             id="pods"
           >
             <Stack
+                        className=' backdrop-blur '
+
               direction={"column"}
               justifyContent={"center"}
               alignItems={"flex-start"}
               p={2}
-              sx={{ backgroundColor: "#312f2f", opacity: "80%", borderRadius:'10px' }}
+              sx={{  borderRadius:'10px' }}
             >
               <Stack
                 direction={"row"}
@@ -120,6 +123,8 @@ const Member = () => {
                 
               >
                 <Typography
+                              className=' hover:text-yellow-400 cursor-pointer '
+
                   sx={{
                     color: "white",
                     typography: { lg: "subtitle1", xs: "subtitle2" },
@@ -143,11 +148,12 @@ const Member = () => {
             id="disposable"
           >
             <Stack
+            className=' backdrop-blur '
               direction={"column"}
               justifyContent={"center"}
               alignItems={"flex-start"}
               p={2}
-              sx={{ backgroundColor: "#312f2f", opacity: "80%", borderRadius:'10px' }}
+              sx={{  borderRadius:'10px' }}
             >
               <Stack
                 direction={"row"}
@@ -159,6 +165,8 @@ const Member = () => {
                 }}
               >
                 <Typography
+                              className=' hover:text-yellow-400 cursor-pointer '
+
                   sx={{
                     color: "white",
                     typography: { lg: "subtitle1", xs: "subtitle2" },
