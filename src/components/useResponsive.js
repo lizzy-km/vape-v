@@ -16,8 +16,8 @@ const useResponsive = () => {
   }, []);
 
   const mobile = innerWidth < 500;
-  const tablet = innerWidth > 500 && innerWidth < 770;
-  const desktop = innerWidth > 770;
+  const tablet = innerWidth > 500 && innerWidth < 885;
+  const desktop = innerWidth > 885;
 
   return {
     mobile,

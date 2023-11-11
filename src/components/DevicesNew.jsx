@@ -25,7 +25,7 @@ const DevicesNew = () => {
   useEffect(() => {
     let limit = 12 * slide;
 
-    let cardNum = mobile ? 60 : tablet ? 60 : 24
+    let cardNum = mobile ? 60 : tablet ? 48 : 24
 
     if (limit > cardNum ) {
       setSlide(0);
