@@ -79,7 +79,7 @@ const PodsNew = () => {
                 </div>
               </Stack>
             </div>
-            <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[80%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
+            <div className=" transition-all flex max-[500px]:rounded-lg rounded-r-lg max-[500px]:w-[100%] w-[74.6%] gap-2 max-[500px]:p-2   p-2 overflow-hidden   backdrop-blur bg-[#21212141] ">
                 <div
                   id=""
                   style={{
@@ -88,10 +88,10 @@ const PodsNew = () => {
                   className="   transition-all gap-2 w-full flex "
                 >
                   {cate?.productListBuyers.slice(0, 6).map((product, i) => (
-                    <div key={i} className=" transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
+                    <div key={i} className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
                       <img
                         src={product.url}
-                        className=" w-[100%] rounded-lg "
+                        className=" cursor-pointer w-[100%] rounded-lg "
                       />
                       <Typography sx={{ color: "white", fontSize: mobile? "10px" : "14px" }}>
                         {product.name}

@@ -18,7 +18,7 @@ const ReleasedCard = ({product}) => {
        >
         
         <img
-          className=" absolute h-[100%] top-0 right-0  z-[9] flex rounded-xl object-cover "
+          className=" cursor-pointer absolute h-[100%] top-0 right-0  z-[9] flex rounded-xl object-cover "
           src={product.url}
         />
         <div className="  text-[1rem] rounded-lg flex justify-end items-end  font-medium absolute h-[100%] p-2 bottom-0 left-0 w-[50%] text-white  " direction={"column"}>

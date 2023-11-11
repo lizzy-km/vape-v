@@ -5,7 +5,7 @@ const VapeCard = ({product,i}) => {
     <div   className=" font-sans rounded-lg  flex relative justify-center items-center max-[500px]:w-[80%] w-full ">
                         <div className=" cursor-pointer flex flex-col justify-center items-center  "
                         >
-                            <img className="  transition-all bg-[#d4d4d4] rounded-xl w-[90%] object-cover " src={product.url} alt={`img${i}`} id="gridImg"/>
+                            <img className=" cursor-pointer transition-all bg-[#d4d4d4] rounded-xl w-[90%] object-cover " src={product.url} alt={`img${i}`} id="gridImg"/>
                             <p  className="font-sans font-medium tracking-wide ">{product.name}</p>
                             <p className="font-sans font-semibold tetx-[1rem] " >{product.promotePrice} MMK</p>
                             <p className="font-sans line-through text-[12px] " >{product.originalPrice} MMK</p>

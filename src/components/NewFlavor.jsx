@@ -29,12 +29,12 @@ const NewFlavor = () => {
       {
             data?.map((banner, i) => (
             mobile ?   banner.isWeb === 0 && (
-              <div key={i}  className="  min-w-[95%]  ">
+              <div key={i}  className=" cursor-pointer  min-w-[95%]  ">
               <img  src={banner.url}  style={{borderRadius: "10px"}}/>
 
               </div>
           ) : banner.isWeb === 1 && (
-            <div key={i}  className="   min-w-[95%]  ">
+            <div key={i}  className=" cursor-pointer  min-w-[95%]  ">
             <img  src={banner.url}  style={{borderRadius: "10px"}}/>
 
             </div>

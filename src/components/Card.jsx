@@ -19,7 +19,7 @@ const Card = ({product,slide}) => {
                     
     <img
       src={product.url}
-      className=" w-[100%] rounded-lg "
+      className=" cursor-pointer w-[100%] rounded-lg "
     />
     <Typography sx={{ color: "white", fontSize: "14px",  }}>
       {product.name}
