@@ -2,10 +2,10 @@ import React from "react";
 
 const VapeCard = ({ product, i }) => {
   return (
-    <div className=" font-sans rounded-lg max-[500px]:h-auto h-[268.6px]  flex relative justify-center items-center max-[500px]:w-[160px] w-[180px] ">
+    <div className=" font-sans rounded-lg max-[500px]:h-auto h-auto  flex relative justify-center items-center max-[500px]:w-[160px] w-[180px] ">
       <div className=" cursor-pointer flex flex-col justify-center items-center  ">
         <img
-          className=" cursor-pointer transition-all bg-[#d4d4d4] rounded-xl w-[90%] object-cover "
+          className=" cursor-pointer transition-all bg-[#d4d4d4] rounded-xl max-[500px]:w-[160px] w-[180px] max-[500px]:h-[160px] h-[180px] object-cover "
           src={product.url}
           alt={`img${i}`}
           id="gridImg"
@@ -34,7 +34,7 @@ const VapeCard = ({ product, i }) => {
         </div>
       </div>
       <p
-        className=" text-white font-sans text-[12px] px-3 absolute top-0 bg-[#ff0000] "
+        className=" text-white font-sans text-[14px] px-3 absolute top-0 bg-[#ff0000] "
         id="percentOff"
       >
         {product.promotePercent}% OFF
