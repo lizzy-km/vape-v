@@ -73,7 +73,7 @@ const NewReleased = () => {
         </Typography>
       </div>
 
-      <Typography variant="h6">Try Out Our Latest Flavour Here</Typography>
+      <Typography variant="h7">Try Out Our Latest Flavour Here</Typography>
       <div className=" justify-center my-[1.5rem] flex-wrap h-auto w-[100%] gap-3 max-[500px]:w-[90%] flex max-[500px]:flex-col ">
         {data?.slice(0, 4).map((product, i) => (
           <ReleasedCard product={product} key={i} />

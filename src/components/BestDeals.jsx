@@ -68,7 +68,7 @@ const BestDeals = () => {
       <Typography variant={mobile ? "h2" : "h3"} fontWeight={"bold"}>
         Best Deals
       </Typography>
-      <Typography variant="h6">Just for you</Typography>
+      <Typography variant="h5">Just for you</Typography>
 
       <div className=" flex max-[500px]:flex-col flex-wrap my-6 w-[100%] justify-between max-[500px]:gap-6 gap-0 items-center ">
         {data?.slice(0, 6).map((product, i) => (

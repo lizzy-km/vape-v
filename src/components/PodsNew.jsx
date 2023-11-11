@@ -65,11 +65,12 @@ const PodsNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
+                    className='w-[70%]'
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
                     >
-                      Try the best for you here!
+                      Variety of choices available
                     </Typography>
                   </div>
                 </Stack>

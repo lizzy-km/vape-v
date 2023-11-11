@@ -62,12 +62,12 @@ const DisposableNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
-                    className=' text-wrap  '
+                    className=' w-[70%] text-wrap  '
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
                     >
-                      Try the best for you here!
+                      Easy, clean & superb flavor
                     </Typography>
                   </div>
                 </Stack>
