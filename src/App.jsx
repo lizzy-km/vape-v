@@ -19,7 +19,7 @@ const App = () => {
       <div className=" relative flex w-full overflow-y-auto max-h-screen ">
         <Header />
         <div className="  flex flex-col  w-full h-auto ">
-          <div className=" flex  w-full flex-col gap-5 ">
+          <div className=" flex h-auto justify-center items-center  w-full flex-col gap-5 ">
             <Home />
             <BestDeals />
             <Member />

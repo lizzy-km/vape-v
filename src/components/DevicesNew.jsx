@@ -27,14 +27,16 @@ const DevicesNew = () => {
   useEffect(() => {
     let limit = 12 * slide;
 
-    if (limit > 25) {
+    let cardNum = mobile ? 36 : tablet ? 60 : 24
+
+    if (limit > cardNum ) {
       setSlide(0);
     }
   }, [slide]);
 
   return (
     <div
-      className=" w-[90%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[4rem] "
+      className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5  "
       style={{
         background: "url(/public/images/ice.png)",
         backgroundRepeat: "no-repeat",
@@ -92,7 +94,7 @@ const DevicesNew = () => {
                     cate.productListBuyers.slice(0, 6).map((product, i) => (
                       <div
                         key={i}
-                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]"
+                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[130px] flex-col min-w-[191px]"
                       >
                         <img
                           src={product.url}

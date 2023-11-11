@@ -20,13 +20,13 @@ const NewFlavor = () => {
   const slideNext = () => {
     const card = document.getElementById("cardF");
 
-    card.classList.toggle(mobile ? "translate-x-[-96%]" : "translate-x-[-95%]");
+    card.classList.toggle(mobile ? "translate-x-[-96%]" : "translate-x-[-98%]");
   };
   return (
     <div className=" relative  max-w-[100%] w-[100%] self-end overflow-hidden flex justify-end items-end ">
       <div
         id="cardF"
-        className=" max-[500px]:max-w-[95%] max-w-[95%]  transition-all  flex gap-2 "
+        className=" max-[500px]:max-w-[95%] max-w-[98%]  transition-all  flex gap-1 "
       >
         {data?.map((banner, i) =>
           mobile
@@ -36,7 +36,7 @@ const NewFlavor = () => {
                 </div>
               )
             : banner.isWeb === 1 && (
-                <div key={i} className=" cursor-pointer  min-w-[95%]  ">
+                <div key={i} className=" cursor-pointer  min-w-[98%]  ">
                   <img src={banner.url} style={{ borderRadius: "10px" }} />
                 </div>
               )

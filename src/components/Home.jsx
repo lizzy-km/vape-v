@@ -70,9 +70,10 @@ const Home = () => {
     <div
       onMouseLeave={mobile ? null : hideDetail}
       onMouseEnter={showDetail}
-      className=" overflow-hidden cursor-pointer flex w-full h-auto relative "
+      className=" overflow-hidden cursor-pointer flex w-full  relative "
     >
-      <div className=" bg-[#21212181]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  ">
+      {/* <img className=" opacity-90 rounded-t-[30px] z-[99]    absolute w-[100%]   bottom-[5%] "  src="/public/images/homeB.png" alt="" /> */}
+      <div className=" bg-[#382e345e]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  ">
         <div
           id="detail"
           className="  w-full flex flex-col items-center transition-all justify-center text-white h-0 opacity-0  p-[0px]    "
@@ -94,7 +95,7 @@ const Home = () => {
 
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={mobile ? 150 : 40}
+        naturalSlideHeight={mobile ? 157 : 42}
         totalSlides={isLoading == false ? 1 : mobile ? 3 : 4}
         infinite={true}
         isPlaying={true}
@@ -114,7 +115,7 @@ const Home = () => {
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
-                        className=" relative object-cover "
+                        className="  relative object-cover "
                       />
                     </Slide>
                   )
@@ -125,7 +126,7 @@ const Home = () => {
                     <Slide key={i} index={i}>
                       <img
                         src={banner.url}
-                        className=" relative object-cover "
+                        className=" w-auto  relative object-cover "
                       />
                     </Slide>
                   )
@@ -146,7 +147,9 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-        <DotGroup></DotGroup>
+        <DotGroup
+        className=' max-[500px]:bottom-[10%] bottom-3 '
+        ></DotGroup>
       </CarouselProvider>
     </div>
   );

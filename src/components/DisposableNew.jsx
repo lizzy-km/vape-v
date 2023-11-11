@@ -19,19 +19,20 @@ const DisposableNew = () => {
 
   useEffect(() => {
     let limit = 12 * slide;
+    let cardNum = mobile ? 36 : tablet ? 60 : 24
 
-    if (limit > 25) {
+    if (limit > cardNum) {
       setSlide(0);
     }
   }, [slide]);
   return (
     <div
-      className=" w-[90%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[4rem] "
-      style={{
+    className=" w-[96%] rounded-lg justify-center items-center bg-black max-[500px]:mx-5 mx-[1.8rem] "
+    style={{
         background: "url(/public/images/fruit.png)",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#312f2f",
-        backgroundSize: "300px",
+        backgroundSize: "250px",
         backgroundPosition: "left bottom",
       }}
     >
@@ -42,7 +43,7 @@ const DisposableNew = () => {
               className=" relative max-[500px]:flex-col flex w-full justify-between items-center "
               key={i}
             >
-              <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-4 justify-center items-center ">
+              <div className=" min-w-[20%] max-[500px]:w-full flex max-[500px]:p-2 p-0 justify-start items-center ">
                 <Stack
                   direction={"row"}
                   justifyContent={"center"}
@@ -53,7 +54,7 @@ const DisposableNew = () => {
                     className=" w-[50px] h-auto "
                     style={{ borderRadius: "10px" }}
                   />
-                  <div>
+                  <div className="  w-[70%] flex-wrap justify-start items-center " >
                     <Typography
                       variant="h4"
                       ml={0.5}
@@ -63,6 +64,7 @@ const DisposableNew = () => {
                       {cate.name}
                     </Typography>
                     <Typography
+                    className=' text-wrap  '
                       ml={0.5}
                       fontWeight={"thin"}
                       sx={{ color: "white" }}
@@ -78,12 +80,12 @@ const DisposableNew = () => {
                   style={{
                     translate: `-${slide * 12}rem`,
                   }}
-                  className="   transition-all gap-2 w-full flex "
+                  className="  transition-all gap-2 w-full flex "
                 >
                   {cate?.productListBuyers.slice(0, 6).map((product, i) => (
                     <div
                       key={i}
-                      className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]"
+                      className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[130px] flex-col min-w-[191px]"
                     >
                       <img
                         src={product.url}

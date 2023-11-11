@@ -1,15 +1,14 @@
 import React from "react";
-import { Stack, Typography, Grid, Button, Box } from "@mui/material";
 
 const ReleasedCard = ({ product }) => {
   const bgColor = product.bgClass;
   return (
-    <div className="  relative  flex rounded-lg max-[500px]:w-[100%] w-[25%]  h-[200px] ">
+    <div className="  relative  flex-wrap flex rounded-lg max-[500px]:w-[100%] w-[295px]  h-[200px] ">
       <div
         style={{
           backgroundImage: `url(${product.background}) `,
           backgroundColor: bgColor,
-          backgroundSize: "200px",
+          backgroundSize: "100%",
           backgroundRepeat: "no-repeat",
           borderRadius: "10px",
           backgroundPosition: "right bottom",

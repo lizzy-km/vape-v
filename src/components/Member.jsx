@@ -6,7 +6,7 @@ const Member = () => {
   const { mobile, tablet, desktop } = useResponsive();
 
   return (
-    <Grid container spacing={1} my={7} px={mobile ? 4 : 8}>
+    <Grid container spacing={1} my={7} px={mobile ? 4 : 2}>
       <Grid item lg={7} xs={12}>
         <Stack
           direction={"row"}

@@ -51,7 +51,7 @@ const NewReleased = () => {
       justifyContent={"center"}
       alignItems={"center"}
       my={7}
-      mx={1.5}
+    //   mx={1}
     >
       <div className=" flex gap-1 ">
         <Typography
@@ -70,7 +70,7 @@ const NewReleased = () => {
       </div>
 
       <Typography variant="h6">Try Out Our Latest Flavour Here</Typography>
-      <div className="  my-[1.5rem] w-[92%] gap-2 max-[500px]:w-[90%] flex max-[500px]:flex-col ">
+      <div className=" justify-center my-[1.5rem] flex-wrap h-auto w-[100%] gap-3 max-[500px]:w-[90%] flex max-[500px]:flex-col ">
         {data?.slice(0, 4).map((product, i) => (
           <ReleasedCard product={product} key={i} />
         ))}
