@@ -2,7 +2,7 @@ import React from "react";
 
 const VapeCard = ({ product, i }) => {
   return (
-    <div className=" font-sans rounded-lg max-[500px]:h-auto h-[268.6px]  flex relative justify-center items-center max-[500px]:w-[80%] w-[180px] ">
+    <div className=" font-sans rounded-lg max-[500px]:h-auto h-[268.6px]  flex relative justify-center items-center max-[500px]:w-[160px] w-[180px] ">
       <div className=" cursor-pointer flex flex-col justify-center items-center  ">
         <img
           className=" cursor-pointer transition-all bg-[#d4d4d4] rounded-xl w-[90%] object-cover "
