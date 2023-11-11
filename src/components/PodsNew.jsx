@@ -1,11 +1,12 @@
 import { Stack, Typography, Grid, Button, Box } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import { useGetDevices } from "../banner-list-query";
 import { useEffect, useState } from "react";
 import useResponsive from "./useResponsive";
+import DevicesData from "./DevicesData";
 
 const PodsNew = () => {
-  const { data } = useGetDevices();
+  const { devices } = DevicesData();
+
   const [slide, setSlide] = useState(0);
   const { mobile, tablet, desktop } = useResponsive();
 
@@ -36,7 +37,7 @@ const PodsNew = () => {
         backgroundPosition: "left center",
       }}
     >
-      {data?.mainCategory.map(
+      {devices?.map(
         (cate, i) =>
           cate.name === "Pods" && (
             <div

@@ -1,11 +1,11 @@
 import { Stack, Typography, Grid, Button, Box } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import { useGetDevices } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useEffect, useState } from "react";
+import DevicesData from "./DevicesData";
 
 const DisposableNew = () => {
-  const { data } = useGetDevices();
+  const { devices } = DevicesData()
   const [slide, setSlide] = useState(0);
   const { mobile, tablet, desktop } = useResponsive();
 
@@ -33,7 +33,7 @@ const DisposableNew = () => {
         backgroundPosition: "left center",
       }}
     >
-      {data?.mainCategory.map(
+      {devices?.map(
         (cate, i) =>
           cate.name === "Disposables" && (
             <div

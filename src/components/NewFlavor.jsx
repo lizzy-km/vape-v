@@ -1,20 +1,10 @@
-import { Box } from "@mui/material";
-import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-  DotGroup,
-} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import {  useGetBannerList } from "../banner-list-query";
 import useResponsive from "./useResponsive";
+import DevicesData from "./DevicesData";
 
 const NewFlavor = () => {
-  const { data } = useGetBannerList("adsBanner", 4);
+  const { flavor } = DevicesData();
   const { mobile, tablet, desktop } = useResponsive();
 
  
@@ -29,7 +19,7 @@ const NewFlavor = () => {
         id="cardF"
         className=" max-[500px]:max-w-[98%] max-w-[98%] rounded-lg  transition-all  flex gap-1 "
       >
-        {data?.map((banner, i) =>
+        {flavor?.map((banner, i) =>
           mobile
             ? banner.isWeb === 0 && (
                 <div key={i} className="rounded-lg cursor-pointer h-full   min-w-[96%]  ">

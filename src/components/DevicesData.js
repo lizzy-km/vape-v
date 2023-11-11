@@ -2,7 +2,7 @@ import React from 'react'
 
 const DevicesData = () => {
     const devices = [
-        [
+        
           {
               "id": 39,
               "name": "Devices",
@@ -1035,11 +1035,215 @@ const DevicesData = () => {
               "isCustomCategory": false,
               "productListBuyers": []
           }
+      
       ]
-      ]
+      const hero = [
+        {
+            "id": 406,
+            "name": "MobileBanner3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/0831d529-5bfd-4d23-bd17-9fae54a0612c.png",
+            "bannerLinkId": 15,
+            "isWeb": 0,
+            "brandId": null,
+            "seqNo": 1,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": null,
+            "categoryName": null,
+            "categoryImgUrl": null,
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 417,
+            "name": "WebBanner4",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/05111ead-159b-4e56-a4e0-26ca4342044c.png",
+            "bannerLinkId": 15,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 1,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": null,
+            "categoryName": null,
+            "categoryImgUrl": null,
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 408,
+            "name": "MobileBanner3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/4a5d0558-8051-494e-99ef-a25ae33cb0ce.png",
+            "bannerLinkId": 16,
+            "isWeb": 0,
+            "brandId": null,
+            "seqNo": 2,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": 39,
+            "categoryName": "Devices",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/c5c2ceec-ddfd-4c9f-bc3d-e3f95c9fcba4.png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 416,
+            "name": "WebBanner3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/98a83a70-457a-434b-b381-bfbe017e88f3.png",
+            "bannerLinkId": 16,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 2,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": 39,
+            "categoryName": "Devices",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/c5c2ceec-ddfd-4c9f-bc3d-e3f95c9fcba4.png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 407,
+            "name": "MobileBanner3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/47504a5b-dc81-45c5-aa7d-2df90c87345f.png",
+            "bannerLinkId": 16,
+            "isWeb": 0,
+            "brandId": null,
+            "seqNo": 3,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": 39,
+            "categoryName": "Devices",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/c5c2ceec-ddfd-4c9f-bc3d-e3f95c9fcba4.png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 419,
+            "name": "WebBanner3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/28aa2506-eef6-4330-8d45-50e4fd3b0cd1.png",
+            "bannerLinkId": 16,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 3,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": 39,
+            "categoryName": "Devices",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/c5c2ceec-ddfd-4c9f-bc3d-e3f95c9fcba4.png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 418,
+            "name": "WebBanner2",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/9b7dcffe-a667-4c8c-b496-30e204159051.png",
+            "bannerLinkId": 16,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 4,
+            "width": "1074",
+            "height": "1440",
+            "categoryId": 66,
+            "categoryName": "Disposables",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/5213e417-d74b-48d3-b159-9f61097b61b7.png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        }
+    ]
+    const flavor = [
+        {
+            "id": 396,
+            "name": "MobileAds3",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/242bde5a-7d83-45ef-9c69-8b5b463196cc.png",
+            "bannerLinkId": 10,
+            "isWeb": 0,
+            "brandId": null,
+            "seqNo": 1,
+            "width": "840",
+            "height": "1080",
+            "categoryId": null,
+            "categoryName": null,
+            "categoryImgUrl": null,
+            "productId": 115,
+            "productName": "Chilled Watermelon ",
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 401,
+            "name": "WebAds1",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/a0bbb0b5-8d28-4565-bbe8-3d7142a33ab7.png",
+            "bannerLinkId": 8,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 1,
+            "width": "840",
+            "height": "1080",
+            "categoryId": 82,
+            "categoryName": "Cokeholic",
+            "categoryImgUrl": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/Category/4c7ca7c0-d203-4e2d-9aa8-6701aa829799..png",
+            "productId": null,
+            "productName": null,
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 402,
+            "name": "WebAds2",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/6c6f08c3-75ef-4f6f-9b6f-381a5b004ade.png",
+            "bannerLinkId": 10,
+            "isWeb": 1,
+            "brandId": null,
+            "seqNo": 2,
+            "width": "840",
+            "height": "1080",
+            "categoryId": null,
+            "categoryName": null,
+            "categoryImgUrl": null,
+            "productId": 116,
+            "productName": "Iced Grapes",
+            "searchKeyword": null,
+            "recommendedId": null
+        },
+        {
+            "id": 398,
+            "name": "MobileAds2",
+            "url": "https://aws-mhsimages-bucket.s3-ap-southeast-1.amazonaws.com/sit/VapePI/images/product/cd2504ee-7254-4a9d-bf71-d26ae8526273.png",
+            "bannerLinkId": 10,
+            "isWeb": 0,
+            "brandId": null,
+            "seqNo": 2,
+            "width": "840",
+            "height": "1080",
+            "categoryId": null,
+            "categoryName": null,
+            "categoryImgUrl": null,
+            "productId": 116,
+            "productName": "Iced Grapes",
+            "searchKeyword": null,
+            "recommendedId": null
+        }
+    ]
   return (
     {
-        devices
+        devices,
+        hero,
+        flavor
     }
   )
 }

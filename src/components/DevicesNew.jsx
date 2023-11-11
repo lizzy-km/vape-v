@@ -1,6 +1,5 @@
 import { Stack, Typography, Grid, Button, Box } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import { useGetDevices } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useEffect, useState } from "react";
 import "./slide.css";
@@ -10,12 +9,7 @@ const DevicesNew = () => {
 
   const {devices} = DevicesData()
 
-  const [isLoading, setIsLoading] = useState(true);
-  const { data } = useGetDevices({
-    onSuccess(data) {
-      setIsLoading(false);
-    },
-  });
+
   const { mobile, tablet, desktop } = useResponsive();
 
   const [slide, setSlide] = useState(0);
@@ -96,7 +90,7 @@ const DevicesNew = () => {
                   }}
                   className="   transition-all gap-2 w-full flex "
                 >
-                  {!isLoading &&
+                  {
                     cate.productListBuyers.slice(0, 6).map((product, i) => (
                       <div
                         key={i}

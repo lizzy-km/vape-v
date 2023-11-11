@@ -13,58 +13,22 @@ import { useGetBannerList } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useState } from "react";
 import Loader from "./Loader";
+import DevicesData from "./DevicesData";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const {hero} = DevicesData()
   const { data } = useGetBannerList("heroBanner", 1, {
     onSuccess(data) {
       setIsLoading(true);
     },
   });
 
-  // const [slide, setSlide] = useState(true);
-  // const [total, setTotal] = useState(0);
-
-  // const showDetail = () => {
-  //   const detail = document.getElementById("detail");
-  //   setSlide(false);
-  //   detail.classList.add("h-auto");
-  //   detail.classList.remove("h-0");
-  //   detail.classList.add("p-[2%]");
-  //   detail.classList.remove("p-[0px]");
-  //   detail.classList.add("opacity-1");
-  //   detail.classList.remove("opacity-0");
-  // };
-
-  // const hideDetail = () => {
-  //   const detail = document.getElementById("detail");
-
-  //   detail.classList.add("h-auto");
-  //   detail.classList.remove("h-0");
-  //   detail.classList.add("p-[2%]");
-  //   detail.classList.remove("p-[0px]");
-  //   detail.classList.add("opacity-1");
-  //   detail.classList.remove("opacity-0");
-  //   // detail.classList.add('h-0')
-  //   // detail.classList.remove('h-auto')
-  //   // detail.classList.add('p-[0px]')
-  //   // detail.classList.remove('p-[2%]')
-  //   // detail.classList.add('opacity-0')
-  //   // detail.classList.remove('opacity-1')
-  // };
+  
 
   const { mobile, tablet, desktop } = useResponsive();
 
-  // if (mobile || desktop) {
-  //   const detail = document.getElementById("detail");
-
-  //   detail?.classList.add("h-auto");
-  //   detail?.classList.remove("h-0");
-  //   detail?.classList.add("p-[2%]");
-  //   detail?.classList.remove("p-[0px]");
-  //   detail?.classList.add("opacity-1");
-  //   detail?.classList.remove("opacity-0");
-  // }
+ 
 
   return (
     <div
@@ -84,7 +48,7 @@ const Home = () => {
       >
         <Slider>
           {isLoading ? (
-            data?.map(
+            hero?.map(
               (banner, i) =>
                 banner.isWeb === 1 && (
                   <Slide key={i} index={i}>
