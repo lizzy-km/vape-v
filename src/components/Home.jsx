@@ -67,13 +67,12 @@ const Home = () => {
   // }
 
   return (
-    <div id="hero"
+    <div
+      id="hero"
       className=" overflow-hidden cursor-pointer flex h-[100%] w-full  relative "
     >
       {/* <img className=" opacity-90 rounded-t-[30px] z-[99]    absolute w-[100%]   bottom-[5%] "  src="/public/images/homeB.png" alt="" /> */}
-      <div className=" bg-[#382e3433]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  ">
-      
-      </div>
+      <div className=" bg-[#382e3433]  z-[999] max-[500px]:h-[85%] h-[93%] absolute w-full transition-all flex max-[500px]:py-0 py-[1rem] justify-center items-end  "></div>
 
       <CarouselProvider
         naturalSlideWidth={100}
@@ -84,35 +83,23 @@ const Home = () => {
         className="  relative w-full h-auto  "
       >
         <Slider>
-          {isLoading == false && (
+          {isLoading ? (
+            data?.map(
+              (banner, i) =>
+                banner.isWeb === 1 && (
+                  <Slide key={i} index={i}>
+                    <img
+                      src={banner.url}
+                      className="   relative object-cover "
+                    />
+                  </Slide>
+                )
+            )
+          ) : (
             <Slide index={0}>
               <Loader />{" "}
             </Slide>
           )}
-
-          {isLoading && mobile == true
-            ? data?.map(
-                (banner, i) =>
-                  banner.isWeb === 1 && (
-                    <Slide key={i} index={i}>
-                      <img
-                        src={banner.url}
-                        className="   relative object-cover "
-                      />
-                    </Slide>
-                  )
-              )
-            : data?.map(
-                (banner, i) =>
-                  banner.isWeb === 1 && (
-                    <Slide key={i} index={i}>
-                      <img
-                        src={banner.url}
-                        className="  w-[100%]  relative object-cover "
-                      />
-                    </Slide>
-                  )
-              )}
         </Slider>
 
         <div className=" flex top-0 absolute p-2 h-full z-[999]  justify-center items-center  ">
@@ -129,10 +116,9 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[0] bottom-1  " >
-                    <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] max-[500px]:px-[.6rem] max-[500px]:py-[0.4rem] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
-                    </div>
-        
+        <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[0] bottom-1  ">
+          <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] max-[500px]:px-[.6rem] max-[500px]:py-[0.4rem] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
+        </div>
       </CarouselProvider>
     </div>
   );
