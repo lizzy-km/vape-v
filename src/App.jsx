@@ -21,7 +21,7 @@ const App = () => {
         <div className="  flex flex-col  items-center  w-full h-auto ">
           <div className=" flex h-auto items-center  w-[100%] flex-col gap-2 ">
             <Home />
-            <div className=" flex h-auto max-[500px]:gap-0  w-[94%] items-center justify-center flex-col gap-6 ">
+            <div className=" flex h-auto max-[500px]:gap-5  w-[94%] items-center justify-center flex-col gap-6 ">
               <BestDeals />
               <Member />
               <NewReleased />
