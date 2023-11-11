@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-.head{
-  font-family:'Times New Roman', Times, serif;
+.head {
+  font-family: "Times New Roman", Times, serif;
 }
 
 body {
@@ -10,13 +10,12 @@ body {
   margin: 0;
 }
 
-
 .slide {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
 .carousel__dot-group {
-  display: flex ;
+  display: flex;
   width: 100%;
   height: auto;
   padding: 1rem;
@@ -29,23 +28,22 @@ body {
   padding: 4px;
   background-color: #312f2f57 !important;
   border-radius: 100px;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .carousel__dot--selected {
   padding: 3px;
   background-color: #312f2f !important;
-
 }
 
-.css-x9fn3p{
+.css-x9fn3p {
   line-height: 1.5;
   letter-spacing: 0.00938em;
   color: gold;
   font-weight: 700;
   margin: 0;
   padding: 0;
-  font-family: Poppins,sans-serif;
+  font-family: Poppins, sans-serif;
   user-select: none;
   width: 1em;
   height: 1em;
@@ -56,8 +54,8 @@ body {
   font-size: 10px;
 }
 
- /** Membership **/
- .prizeImg {
+/** Membership **/
+.prizeImg {
   width: 70px;
   margin-right: 10px;
 }
@@ -104,29 +102,29 @@ body {
   bottom: 10px;
   width: 63%;
   height: 10px;
-  transform:  translateX(-40%)  ;
+  transform: translateX(-40%);
   clip-path: polygon(0 61%, 96% 46%, 98% 47%, 2% 100%);
 
   border-radius: 100px;
   background: rgba(250, 201, 5, 0.6);
 }
 
-.premiumImg{
+.premiumImg {
   width: 180px;
 }
-.newFlavorImg{
+.newFlavorImg {
   width: auto;
   height: 250px;
 }
 
-  /** New Flavor **/
-  #newflavor {
-    position: relative;
-    height: 250px;
-  }
-  
-  .newFlavorStack {
-    height: 250px;
-    background-color: #312f2f;
-    border-radius: 10px;
-  }
+/** New Flavor **/
+#newflavor {
+  position: relative;
+  height: 250px;
+}
+
+.newFlavorStack {
+  height: 250px;
+  background-color: #312f2f;
+  border-radius: 10px;
+}

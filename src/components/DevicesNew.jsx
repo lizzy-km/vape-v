@@ -3,22 +3,21 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import { useGetDevices } from "../banner-list-query";
 import useResponsive from "./useResponsive";
 import { useEffect, useState } from "react";
-import './slide.css'
+import "./slide.css";
 
 const DevicesNew = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const { data } = useGetDevices({
-    onSuccess(data){
-      setIsLoading(false)
-    }
+    onSuccess(data) {
+      setIsLoading(false);
+    },
   });
   const { mobile, tablet, desktop } = useResponsive();
 
   const [slide, setSlide] = useState(0);
 
   const slideNext = () => {
-    setSlide(slide +1);
-    
+    setSlide(slide + 1);
   };
 
   const slidePrev = () => {
@@ -26,12 +25,11 @@ const DevicesNew = () => {
   };
 
   useEffect(() => {
-    let limit = 12 * slide
+    let limit = 12 * slide;
 
-    if (limit > 25 ) {
-        setSlide(0)
+    if (limit > 25) {
+      setSlide(0);
     }
-    
   }, [slide]);
 
   return (
@@ -86,58 +84,71 @@ const DevicesNew = () => {
                 <div
                   id=""
                   style={{
-                    translate:`-${slide * 12}rem`
+                    translate: `-${slide * 12}rem`,
                   }}
                   className="   transition-all gap-2 w-full flex "
                 >
-                  
-                  { !isLoading && cate.productListBuyers.slice(0, 6).map((product, i) => (
-                    <div key={i} className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]">
-                      <img
-                        src={product.url}
-                        className=" cursor-pointer w-[100%] rounded-lg "
-                      />
-                      <Typography sx={{ color: "white", fontSize: mobile? "10px" : "14px" }}>
-                        {product.name}
-                      </Typography>
-                      {product.promotePrice > 0 ? (
-                        <>
-                          <Typography sx={{ color: "white" }}>
-                            {product.promotePrice} Ks
-                          </Typography>
+                  {!isLoading &&
+                    cate.productListBuyers.slice(0, 6).map((product, i) => (
+                      <div
+                        key={i}
+                        className=" p-4 transition-all flex justify-center items-center max-[500px]:min-w-[30%] flex-col min-w-[23%]"
+                      >
+                        <img
+                          src={product.url}
+                          className=" cursor-pointer w-[100%] rounded-lg "
+                        />
+                        <Typography
+                          sx={{
+                            color: "white",
+                            fontSize: mobile ? "10px" : "14px",
+                          }}
+                        >
+                          {product.name}
+                        </Typography>
+                        {product.promotePrice > 0 ? (
+                          <>
+                            <Typography sx={{ color: "white" }}>
+                              {product.promotePrice} Ks
+                            </Typography>
+                            <Typography
+                              sx={{
+                                color: "gold",
+                                textDecoration: "line-through",
+                                fontSize: mobile ? "10px" : "14px",
+                              }}
+                            >
+                              {product.originalPrice} Ks
+                            </Typography>
+                          </>
+                        ) : (
                           <Typography
                             sx={{
                               color: "gold",
-                              textDecoration: "line-through",
-                              fontSize: mobile? "10px" : "14px" 
+                              fontSize: mobile ? "10px" : "14px",
                             }}
                           >
-                            {product.originalPrice} Ks
+                            {product.originalPrice} MMK
                           </Typography>
-                        </>
-                      ) : (
-                        <Typography sx={{ color: "gold", fontSize: mobile? "10px" : "14px"  }}>
-                          {product.originalPrice} MMK
-                        </Typography>
-                      )}
+                        )}
 
-                      <div className=" flex justify-center items-center ">
-                        <svg
-                          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
-                          focusable="false"
-                          aria-hidden="true"
-                          viewBox="0 0 24 24"
-                          data-testid="StarIcon"
-                        >
-                          <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                        </svg>
-                        <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[10px] text-[12px] ">
-                          {" "}
-                          600 Points{" "}
-                        </p>
+                        <div className=" flex justify-center items-center ">
+                          <svg
+                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-x9fn3p"
+                            focusable="false"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                            data-testid="StarIcon"
+                          >
+                            <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                          </svg>
+                          <p className=" tracking-wider font-sans font-medium text-yellow-400 max-[500px]:text-[10px] text-[12px] ">
+                            {" "}
+                            600 Points{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </div>
               <div className=" top-0 h-[79%] flex max-[500px]:items-end justify-center items-center absolute right-4 ">
