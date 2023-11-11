@@ -17,7 +17,7 @@ const Header = () => {
      className=" z-[9999] bg-[#21212100]   fixed w-full flex max-[500px]:h-[40px]    justify-center items-center  ">
       <div className=" max-[500px]:w-full  w-[91.5%] flex p-1 justify-between items-center ">
         <div className=" cursor-pointer flex  gap-[5px] justify-center items-center ">
-          <p className=" head text-white max-[500px]:text-[22px] text-[28px] font-semibold ">
+          <p className=" head text-white max-[500px]:text-[21px] text-[28px] font-semibold ">
             PI
           </p>
           <div className=" flex justify-center items-center   max-h-[20px]  ">
