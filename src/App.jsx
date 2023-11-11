@@ -18,17 +18,19 @@ const App = () => {
     <QueryClientProvider client={client}>
       <div className=" relative flex w-full overflow-y-auto max-h-screen ">
         <Header />
-        <div className="  flex flex-col  w-full h-auto ">
-          <div className=" flex h-auto justify-center items-center  w-full flex-col gap-5 ">
+        <div className="  flex flex-col  items-center  w-full h-auto ">
+          <div className=" flex h-auto items-center  w-[100%] flex-col gap-2 ">
             <Home />
-            <BestDeals />
-            <Member />
-            <NewReleased />
-            <NewFlavor />
-            <DevicesNew />
-            <PodsNew />
-            <DisposableNew />
-            <Footer />
+            <div className=" flex h-auto max-[500px]:gap-0  w-[94%] items-center justify-center flex-col gap-6 ">
+              <BestDeals />
+              <Member />
+              <NewReleased />
+              <NewFlavor />
+              <DevicesNew />
+              <PodsNew />
+              <DisposableNew />
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

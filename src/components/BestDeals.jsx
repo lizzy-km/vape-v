@@ -1,6 +1,7 @@
 import { Stack, Typography, Grid, Button } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import VapeCard from "./VapeCard";
+import useResponsive from "./useResponsive";
 
 const BestDeals = () => {
   const data = [
@@ -59,14 +60,17 @@ const BestDeals = () => {
       points: "600",
     },
   ];
+
+  const { mobile, tablet, desktop } = useResponsive();
+
   return (
     <div className=" flex flex-col justify-center items-center h-auto w-full ">
-      <Typography variant="h3" fontWeight={"bold"}>
+      <Typography variant={mobile ? "h2" : "h3"} fontWeight={"bold"}>
         Best Deals
       </Typography>
       <Typography variant="h6">Just for you</Typography>
 
-      <div className=" flex max-[500px]:flex-col flex-wrap my-6 w-[100%] justify-evenly max-[500px]:gap-6 gap-0 items-center ">
+      <div className=" flex max-[500px]:flex-col flex-wrap my-6 w-[100%] justify-between max-[500px]:gap-6 gap-0 items-center ">
         {data?.slice(0, 6).map((product, i) => (
           <VapeCard key={i + product.id} i={i} product={product} />
         ))}

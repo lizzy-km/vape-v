@@ -26,12 +26,12 @@ const NewFlavor = () => {
     <div className=" relative  max-w-[100%] w-[100%] self-end overflow-hidden flex justify-end items-end ">
       <div
         id="cardF"
-        className=" max-[500px]:max-w-[95%] max-w-[98%]  transition-all  flex gap-1 "
+        className=" max-[500px]:max-w-[98%] max-w-[98%]  transition-all  flex gap-1 "
       >
         {data?.map((banner, i) =>
           mobile
             ? banner.isWeb === 0 && (
-                <div key={i} className=" cursor-pointer  min-w-[95%]  ">
+                <div key={i} className=" cursor-pointer  min-w-[96%]  ">
                   <img src={banner.url} style={{ borderRadius: "10px" }} />
                 </div>
               )

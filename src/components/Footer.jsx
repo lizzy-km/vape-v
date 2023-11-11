@@ -11,10 +11,13 @@ import PrivacyTipOutlinedIcon from "@mui/icons-material/PrivacyTipOutlined";
 import KeyboardReturnOutlinedIcon from "@mui/icons-material/KeyboardReturnOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
+import useResponsive from "./useResponsive";
 const Footer = () => {
+  const { mobile, tablet, desktop } = useResponsive();
+
   return (
     <>
-      <Grid container spacing={2} my={3} px={7}>
+      <Grid container spacing={2} my={3} px={mobile ? 2 : 3}>
         <Grid item lg={3} xs={12}>
           <Typography variant="subtitle1" mb={1}>
             Customer Service

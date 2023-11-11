@@ -3,7 +3,7 @@ import React from "react";
 const ReleasedCard = ({ product }) => {
   const bgColor = product.bgClass;
   return (
-    <div className="  relative  flex-wrap flex rounded-lg max-[500px]:w-[100%] w-[295px]  h-[200px] ">
+    <div className="  relative  flex-wrap flex rounded-lg max-[500px]:w-[100%] w-[280px]  h-[200px] ">
       <div
         style={{
           backgroundImage: `url(${product.background}) `,
