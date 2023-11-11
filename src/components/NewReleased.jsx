@@ -4,6 +4,7 @@ import { Stack, Typography, Grid, Button, Box } from "@mui/material";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { useGetNewReleased } from "../banner-list-query";
 import ReleasedCard from "./ReleasedCard";
+import useResponsive from "./useResponsive";
 
 const NewReleased = () => {
   const data = [
@@ -49,6 +50,9 @@ const NewReleased = () => {
       originalPrice: "30,000",
     },
   ];
+
+  const { mobile, tablet, desktop } = useResponsive();
+
   return (
     <Stack
       direction={"column"}
@@ -60,26 +64,32 @@ const NewReleased = () => {
       <div className=" flex gap-1 ">
         <Typography
           className=" text-red-500 "
-          variant="h3"
+          variant={mobile ? "h4" : "h3"}
           id="red"
           fontWeight={"bold"}
         >
           {" "}
           New
         </Typography>
-        <Typography variant="h3" id="red" fontWeight={"bold"}>
+        <Typography variant={mobile ? "h4" : "h3"} id="red" fontWeight={"bold"}>
           {" "}
           Released
         </Typography>
       </div>
 
-      <Typography variant="h7">Try Out Our Latest Flavour Here</Typography>
-      <div className=" justify-center my-[1.5rem] flex-wrap h-auto w-[100%] gap-3 max-[500px]:w-[90%] flex max-[500px]:flex-col ">
+      <Typography className=' font-medium '
+      style={{
+        fontSize: mobile ? '14px' :'16px'
+      }}
+      >
+        Try Out Our Latest Flavour Here
+      </Typography>
+      <div className=" justify-center items-center my-[1.5rem] flex-wrap h-auto w-[100%] gap-3 max-[500px]:w-[100%] flex max-[500px]:flex-col ">
         {data?.slice(0, 4).map((product, i) => (
           <ReleasedCard product={product} key={i} />
         ))}
       </div>
-      <button className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full w-[16rem] p-2 capitalize ">
+      <button className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full max-[500px]:w-[12rem] w-[16rem] p-2 capitalize ">
         View More <ArrowForwardIosOutlinedIcon fontSize="small" />
       </button>
     </Stack>
