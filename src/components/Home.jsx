@@ -129,7 +129,7 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[5.76rem] bottom-14  " >
+                    <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[6.3rem] bottom-14  " >
                     <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
                     </div>
         
