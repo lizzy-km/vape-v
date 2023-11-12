@@ -11,12 +11,12 @@ const App = () => {
     if (isScroll == true) {
       const navBar =  document.getElementById('navBar')
   
-      navBar?.classList.add('bg-[#18181889]')
+      navBar?.classList.add('bg-[#212121e4]')
       navBar?.classList.remove('bg-[#21212100]')
     }else {
       const navBar =  document.getElementById('navBar')
   
-      navBar?.classList.remove('bg-[#18181889]')
+      navBar?.classList.remove('bg-[#212121e4]')
       navBar?.classList.add('bg-[#21212100]')
     }
   
