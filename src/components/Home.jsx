@@ -80,8 +80,8 @@ const Home = () => {
           </ButtonNext>
         </div>
 
-        <div className=" absolute w-full flex justify-center items-center max-[500px]:bottom-[0] bottom-1  ">
-          <DotGroup className=" z-[999] backdrop-blur bg-[#21212155] max-[500px]:px-[.6rem] max-[500px]:py-[0.4rem] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
+        <div className="  absolute w-full flex justify-center items-center max-[500px]:bottom-1 bottom-1  ">
+          <DotGroup className=" dot-sh z-[999] backdrop-blur bg-[#21212155] max-[500px]:px-[.6rem] max-[500px]:py-[0.4rem] px-[1rem] py-[0.6rem] rounded-full w-auto  "></DotGroup>
         </div>
       </CarouselProvider>
     </div>
