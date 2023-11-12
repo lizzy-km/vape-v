@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import BestDeals from "../components/BestDeals";
 import DevicesNew from "../components/DevicesNew";
 import DisposableNew from "../components/DisposableNew";
@@ -26,6 +27,11 @@ const Landing = () => {
     return (
         
           <div className="  flex flex-col  items-center  w-full h-auto ">
+            <Helmet>
+        <title>Vape Pi</title>
+        <meta name="description" content="Shop incredible deals at Element Vape, a progressive online retail establishment serving the vaping community with mod kits, pod systems, ...." />
+        <meta name="keywords" content="vape, vape pi,vape-pi,vape shop,shop,e-commerce,smoke,myanmar,home,landing, keywords" />
+      </Helmet>
             <div className="  w-full max-[500px]:h-[40px] bg-[#212121] " >
               
             </div>
