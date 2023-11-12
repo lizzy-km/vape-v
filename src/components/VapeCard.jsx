@@ -34,7 +34,7 @@ const VapeCard = ({ product, i }) => {
         </div>
       </div>
       <p
-        className=" text-white font-sans text-[14px] px-3 absolute top-0 bg-[#ff0000] "
+        className=" rounded-b text-white font-sans text-[14px] px-3 absolute top-0 bg-[#ff0000] "
         id="percentOff"
       >
         {product.promotePercent}% OFF

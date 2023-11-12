@@ -75,7 +75,7 @@ const BestDeals = () => {
           <VapeCard key={i + product.id} i={i} product={product} />
         ))}
       </div>
-      <button className=" transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full max-[500px]:w-[12rem] w-[16rem] p-2 capitalize ">
+      <button className="  transition-all hover:bg-[#d4d4d498] font-sans active:bg-[#d4d4d4] bg-[#d4d4d4] text-[#000] rounded-full max-[500px]:w-[12rem] w-[16rem] p-2 capitalize ">
         View More <ArrowForwardIosOutlinedIcon fontSize="small" />
       </button>
     </div>
